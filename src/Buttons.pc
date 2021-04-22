@@ -1,0 +1,322 @@
+<style>
+    .buttons {
+        padding: 10px;
+    }
+    .panel {
+        display: block;
+        clear: both;
+        &-group {
+            width: 120px;
+            margin-bottom: 50px;
+            float: left;
+        }
+    }
+
+    .btn {
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        border: none;
+        display: block;
+        margin: 10px auto;
+        background: #E6E9EF;
+        color: #676879;
+        &-hollow {
+            background: none;
+            border: 1px solid #C5C7D0;
+            &.active {
+                background: #E6E9EF;
+                color: #323338
+            }
+        }
+        &-primary {
+            background: #0085FF;
+            color: #FFFFFF;
+            &.active {
+                background: #0071D9;
+                color: #FFFFFF;
+            }
+            &-hollow {
+                background: none;
+                color: #0085FF;
+                border: 1px solid #0085FF;
+                &.active {
+                    background: #DFF0FF;
+                }
+            }
+        }
+        &-danger {
+            background: #E44258;
+            color: #FFFFFF;
+            &.active {
+                background: #B63546;
+                color: #FFFFFF;
+            }
+            &-hollow {
+                background: none;
+                color: #E44258;
+                border: 1px solid #E44258;
+                &.active {
+                    background: #F9DADE;
+                }
+            }
+        }
+        &-success {
+            background: #00CA72;
+            color: #FFFFFF;
+            &.active {
+                background: #00A25B;
+            }
+            &-hollow {
+                background: none;
+                color: #00CA72;
+                border: 1px solid #00CA72;
+                &.active {
+                    background: #CCF4E3;
+                }
+            }
+        }
+        &-large {
+            padding: 12px 24px;
+            font-size: 16px;
+        }
+        &-medium {
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+        &-small {
+            padding: 5px 8px;
+            font-size: 14px;
+        }
+    }
+
+    .border-0 {
+        border: none;
+    }
+</style>
+
+
+
+<!--
+  @frame { visible: false, title: "" }
+-->
+
+<div export component as="Buttons" className="buttons">
+    {children}
+</div>
+
+<!--
+  @frame { title: "Buttons", width: 754, height: 2426, x: 95, y: 541 }
+-->
+
+<Buttons>
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-primary btn-large">Button</button>
+            <button className="btn btn-primary btn-medium">Button</button>
+            <button className="btn btn-primary btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-primary btn-large active">Button</button>
+            <button className="btn btn-primary btn-medium active">Button</button>
+            <button className="btn btn-primary btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-large">Button</button>
+            <button className="btn btn-medium">Button</button>
+            <button className="btn btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-primary btn-large active">Button</button>
+            <button className="btn btn-primary btn-medium active">Button</button>
+            <button className="btn btn-primary btn-small active">Button</button>
+        </div>
+    </div>
+
+
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-hollow btn-large">Button</button>
+            <button className="btn btn-hollow btn-medium">Button</button>
+            <button className="btn btn-hollow btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-hollow btn-large active">Button</button>
+            <button className="btn btn-hollow btn-medium active">Button</button>
+            <button className="btn btn-hollow btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-large">Button</button>
+            <button className="btn btn-medium">Button</button>
+            <button className="btn btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-primary-hollow btn-large active">Button</button>
+            <button className="btn btn-primary-hollow btn-medium active">Button</button>
+            <button className="btn btn-primary-hollow btn-small active">Button</button>
+        </div>
+    </div>
+
+
+    
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-hollow border-0 btn-large">Button</button>
+            <button className="btn btn-hollow border-0 btn-medium">Button</button>
+            <button className="btn btn-hollow border-0 btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-hollow border-0 btn-large active">Button</button>
+            <button className="btn btn-hollow border-0 btn-medium active">Button</button>
+            <button className="btn btn-hollow border-0 btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn border-0 btn-large">Button</button>
+            <button className="btn border-0 btn-medium">Button</button>
+            <button className="btn border-0 btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn border-0 btn-primary-hollow btn-large active">Button</button>
+            <button className="btn border-0 btn-primary-hollow btn-medium active">Button</button>
+            <button className="btn border-0 btn-primary-hollow btn-small active">Button</button>
+        </div>
+    </div>
+
+
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-danger btn-large">Button</button>
+            <button className="btn btn-danger btn-medium">Button</button>
+            <button className="btn btn-danger btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-danger btn-large active">Button</button>
+            <button className="btn btn-danger btn-medium active">Button</button>
+            <button className="btn btn-danger btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-large">Button</button>
+            <button className="btn btn-medium">Button</button>
+            <button className="btn btn-small">Button</button>
+        </div>
+    </div>
+
+
+
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-danger-hollow  btn-large">Button</button>
+            <button className="btn btn-danger-hollow btn-medium">Button</button>
+            <button className="btn btn-danger-hollow btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-danger-hollow btn-large active">Button</button>
+            <button className="btn btn-danger-hollow btn-medium active">Button</button>
+            <button className="btn btn-danger-hollow btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-hollow btn-large">Button</button>
+            <button className="btn btn-hollow btn-medium">Button</button>
+            <button className="btn btn-hollow btn-small">Button</button>
+        </div>
+    </div>
+
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-danger-hollow border-0  btn-large">Button</button>
+            <button className="btn btn-danger-hollow border-0 btn-medium">Button</button>
+            <button className="btn btn-danger-hollow border-0 btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-danger-hollow border-0 btn-large active">Button</button>
+            <button className="btn btn-danger-hollow border-0 btn-medium active">Button</button>
+            <button className="btn btn-danger-hollow border-0 btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-hollow border-0 btn-large">Button</button>
+            <button className="btn btn-hollow border-0 btn-medium">Button</button>
+            <button className="btn btn-hollow border-0 btn-small">Button</button>
+        </div>
+    </div>
+
+
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-success btn-large">Button</button>
+            <button className="btn btn-success btn-medium">Button</button>
+            <button className="btn btn-success btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-success btn-large active">Button</button>
+            <button className="btn btn-success btn-medium active">Button</button>
+            <button className="btn btn-success btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-large">Button</button>
+            <button className="btn btn-medium">Button</button>
+            <button className="btn btn-small">Button</button>
+        </div>
+    </div>
+
+
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-success-hollow btn-large">Button</button>
+            <button className="btn btn-success-hollow btn-medium">Button</button>
+            <button className="btn btn-success-hollow btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-success-hollow btn-large active">Button</button>
+            <button className="btn btn-success-hollow btn-medium active">Button</button>
+            <button className="btn btn-success-hollow btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-hollow btn-large">Button</button>
+            <button className="btn btn-hollow btn-medium">Button</button>
+            <button className="btn btn-hollow btn-small">Button</button>
+        </div>
+    </div>
+
+
+
+    <div className="panel">
+        <div className="panel-group">
+            <button className="btn btn-success-hollow border-0 btn-large">Button</button>
+            <button className="btn btn-success-hollow border-0 btn-medium">Button</button>
+            <button className="btn btn-success-hollow border-0 btn-small">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-success-hollow border-0 btn-large active">Button</button>
+            <button className="btn btn-success-hollow border-0 btn-medium active">Button</button>
+            <button className="btn btn-success-hollow border-0 btn-small active">Button</button>
+        </div>
+
+        <div className="panel-group">
+            <button className="btn btn-hollow border-0 btn-large">Button</button>
+            <button className="btn btn-hollow border-0 btn-medium">Button</button>
+            <button className="btn btn-hollow border-0 btn-small">Button</button>
+        </div>
+    </div>
+</Buttons>
