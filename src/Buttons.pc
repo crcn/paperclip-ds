@@ -133,6 +133,62 @@
 
 
 
+
+<!--
+  @frame { visible: false }
+-->
+<button export component as="Button" className:primary="primary" className:large="large" className:medium="medium" className:small="small">
+    <style>
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        border: none;
+        display: block;
+        margin: 10px auto;
+        background: #E6E9EF;
+        color: #676879;
+        &.hollow {
+            background: none;
+            border: 1px solid #C5C7D0;
+            &.active {
+                background: #E6E9EF;
+                color: #323338
+            }
+        }
+        &.primary {
+            background: #0085FF;
+            color: #FFFFFF;
+            &.active {
+                background: #0071D9;
+                color: #FFFFFF;
+            }
+            &.hollow {
+                background: none;
+                color: #0085FF;
+                border: 1px solid #0085FF;
+                &.active {
+                    background: #DFF0FF;
+                }
+            }
+        }
+
+        &.large {
+            padding: 12px 24px;
+            font-size: 16px;
+        }
+        &.medium {
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+        &.small {
+            padding: 5px 8px;
+        }
+    </style>
+    {children}
+</button>
+
 <!--
   @frame { visible: false, title: "" }
 -->
@@ -148,9 +204,9 @@
 <Buttons>
     <div className="panel">
         <div className="panel-group">
-            <button className="btn btn-primary btn-large">Button</button>
-            <button className="btn btn-primary btn-medium">Button</button>
-            <button className="btn btn-primary btn-small">Button</button>
+            <Button primary large>Button</Button>
+            <Button primary medium>Button</Button>
+            <Button primary small>Button</Button>
         </div>
 
         <div className="panel-group">
