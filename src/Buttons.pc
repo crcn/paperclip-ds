@@ -1,64 +1,23 @@
 <style>
     .buttons {
-        padding: 10px;
+        padding: 20px;
     }
-    /* .panel {
-        display: block;
-        clear: both;
-        &-group {
-            width: 120px;
-            margin-bottom: 35px;
-            float: left;
-        }
-    } */
-
-    /* .section {
-        display: block;
-        clear: both;
-        position: relative;
-        .left {
-            float: left;
-            width: 50%;
-            position: relative;
-            left: 5px;
-        }
-        .right {
-            float: right;
-            width: 50%;
-            right: 5px;
-        }
-    } */
 
     @mixin bg {
         width: 100%;
+        max-width: 286px;
+        margin: 0 auto;
         border-radius: 10px;
+        padding: 20px;
     }
 
-    .bg {
-        &-danger {
-            @include bg;
-            background: #E44258;  
-        }
-        &-success {
-            @include bg;
-            background: #00CA72; 
-        }
-        &-dark {
-            @include bg;
-            background: #323338; 
-        }
-        &-primary {
-            @include bg;
-            background: #0085FF; 
-        }
-    }
 </style>
 
 
 <!--
   @frame { visible: false }
 -->
-<button export component as="Button" className:primary="primary" className:danger="danger" className:success="success" className:large="large" className:medium="medium" className:small="small" className:active="active" className:hollow="hollow" className:borderless="borderless">
+<button export component as="Button" className:primary="primary" className:danger="danger" className:success="success" className:dark="dark" className:large="large" className:medium="medium" className:small="small" className:active="active" className:hollow="hollow" className:borderless="borderless"  className:inverse="inverse">
     <style>
         border-radius: 4px;
         font-family: 'Roboto';
@@ -93,6 +52,28 @@
                     background: #DFF0FF;
                 }
             }
+            &.inverse {
+                color: #fff;
+                border: 1px solid #fff;
+                &.active {
+                    background: #0071D9;
+                }
+            }
+        }
+        &.dark {
+            background: #323338;
+            color: white;
+            &.active {
+                background: #676879;
+            }
+            &.inverse {
+                background: none;
+                color: #fff;
+                border: 1px solid #fff;
+                &.active {
+                    background: #676879;
+                }
+            }
         }
         &.danger {
             background: #E44258;
@@ -107,6 +88,14 @@
                 border: 1px solid #E44258;
                 &.active {
                     background: #F9DADE;
+                }
+            }
+            &.inverse {
+                background: none;
+                color: #fff;
+                border: 1px solid #fff;
+                &.active {
+                    background: #676879;
                 }
             }
         }
@@ -150,11 +139,13 @@
 -->
 <div export component as="Section" className:column="column" className:danger="danger" className:success="success" className:primary="primary" className:dark="dark">
     <style>
-        display: flex;
         margin-bottom: 10px;
         grid-column-gap: 20px;
+        display: flex;
         &.column {
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         &.danger {
             @include bg;
@@ -348,7 +339,44 @@
             </Panel>
         </Section>
         <Section column danger>
+            <Panel>
+                <Panel column>
+                    <Button large>Button</Button>
+                    <Button medium>Button</Button>
+                    <Button small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button large active>Button</Button>
+                    <Button medium active>Button</Button>
+                    <Button small active>Button</Button>
+                </Panel>
+            </Panel>
 
+            <Panel>
+                <Panel column>
+                    <Button danger inverse borderless large>Button</Button>
+                    <Button danger inverse borderless medium>Button</Button>
+                    <Button danger inverse borderless small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button success hollow borderless large active>Button</Button>
+                    <Button success hollow borderless medium active>Button</Button>
+                    <Button success hollow borderless small active>Button</Button>
+                </Panel>
+            </Panel>
+
+            <Panel>
+                <Panel column>
+                    <Button success hollow borderless large>Button</Button>
+                    <Button success hollow borderless medium>Button</Button>
+                    <Button success hollow borderless small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button success hollow borderless large active>Button</Button>
+                    <Button success hollow borderless medium active>Button</Button>
+                    <Button success hollow borderless small active>Button</Button>
+                </Panel>
+            </Panel>
         </Section>
     </Section>
 
@@ -401,13 +429,11 @@
                     <Button success hollow borderless medium>Button</Button>
                     <Button success hollow borderless small>Button</Button>
                 </Panel>
-
                 <Panel column>
                     <Button success hollow borderless large active>Button</Button>
                     <Button success hollow borderless medium active>Button</Button>
                     <Button success hollow borderless small active>Button</Button>
                 </Panel>
-
                 <Panel column>
                     <Button hollow borderless large>Button</Button>
                     <Button hollow borderless medium>Button</Button>
@@ -416,16 +442,117 @@
             </Panel>
         </Section>
         <Section column success>
-
+            <Panel>
+                <Panel column>
+                    <Button success hollow borderless large>Button</Button>
+                    <Button success hollow borderless medium>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button success hollow borderless large active>Button</Button>
+                    <Button success hollow borderless medium active>Button</Button>
+                </Panel>
+            </Panel>
+            <Panel>
+                <Panel column>
+                    <Button success hollow borderless large>Button</Button>
+                    <Button success hollow borderless medium>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button success hollow borderless large active>Button</Button>
+                    <Button success hollow borderless medium active>Button</Button>
+                </Panel>
+            </Panel>
+            <Panel>
+                <Panel column>
+                    <Button success hollow borderless large>Button</Button>
+                    <Button success hollow borderless medium>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button success hollow borderless large active>Button</Button>
+                    <Button success hollow borderless medium active>Button</Button>
+                </Panel>
+            </Panel>
         </Section>
     </Section>
 
     <Section>
         <Section column dark>
-        
+            <Panel>
+                <Panel column>
+                    <Button large>Button</Button>
+                    <Button medium>Button</Button>
+                    <Button small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button large>Button</Button>
+                    <Button medium>Button</Button>
+                    <Button small>Button</Button>
+                </Panel>
+            </Panel>
+
+            <Panel>
+                <Panel column>
+                    <Button large dark inverse>Button</Button>
+                    <Button medium dark inverse>Button</Button>
+                    <Button small dark inverse>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button large dark inverse active>Button</Button>
+                    <Button medium dark inverse active>Button</Button>
+                    <Button small dark inverse active>Button</Button>
+                </Panel>
+            </Panel>
+
+            <Panel>
+                <Panel column>
+                    <Button dark large>Button</Button>
+                    <Button dark medium>Button</Button>
+                    <Button dark small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button dark large active>Button</Button>
+                    <Button dark medium active>Button</Button>
+                    <Button dark small active>Button</Button>
+                </Panel>
+            </Panel>
         </Section>
         <Section column primary>
-        
+            <Panel>
+                <Panel column>
+                    <Button large>Button</Button>
+                    <Button medium>Button</Button>
+                    <Button small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button large>Button</Button>
+                    <Button medium>Button</Button>
+                    <Button small>Button</Button>
+                </Panel>
+            </Panel>
+            <Panel>
+                <Panel column>
+                    <Button primary large inverse>Button</Button>
+                    <Button primary medium inverse>Button</Button>
+                    <Button primary small inverse>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button primary large inverse active>Button</Button>
+                    <Button primary medium inverse active>Button</Button>
+                    <Button primary small inverse active>Button</Button>
+                </Panel>
+            </Panel>
+            <Panel>
+                <Panel column>
+                    <Button primary large>Button</Button>
+                    <Button primary medium>Button</Button>
+                    <Button primary small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button primary large active>Button</Button>
+                    <Button primary medium active>Button</Button>
+                    <Button primary small active>Button</Button>
+                </Panel>
+            </Panel>
         </Section>
     </Section>
 
