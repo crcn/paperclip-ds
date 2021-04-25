@@ -180,7 +180,7 @@
 <div export component as="Section" className:column="column" className:danger="danger" className:success="success" className:primary="primary" className:dark="dark">
     <style>
         margin-bottom: 10px;
-        grid-column-gap: 20px;
+        grid-column-gap: 17px;
         display: flex;
         &.column {
             flex-direction: column;
