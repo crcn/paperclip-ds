@@ -7,7 +7,7 @@
         clear: both;
         &-group {
             width: 120px;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
             float: left;
         }
     }
@@ -19,19 +19,21 @@
         .left {
             float: left;
             width: 50%;
+            position: relative;
+            left: 5px;
         }
         .right {
             float: right;
             width: 50%;
+            right: 5px;
         }
     }
 
     @mixin bg {
         position: absolute;
-        top: -10px;
-        height: 620px;
+        top: -5px;
+        height: 570px;
         width: 100%;
-        right: 10px;
         border-radius: 10px;
     }
 
@@ -43,6 +45,14 @@
         &-success {
             @include bg;
             background: #00CA72; 
+        }
+        &-dark {
+            @include bg;
+            background: #323338; 
+        }
+        &-primary {
+            @include bg;
+            background: #0085FF; 
         }
     }
 
@@ -360,6 +370,16 @@
             </div>
         </div>
         <div className="right bg-success">
+
+        </div>
+    </div>
+
+    <div className="section">
+        <div className="left">
+            <div className="bg-dark">
+            </div>
+        </div>
+        <div className="right bg-primary">
 
         </div>
     </div>
