@@ -2,7 +2,7 @@
     .buttons {
         padding: 10px;
     }
-    .panel {
+    /* .panel {
         display: block;
         clear: both;
         &-group {
@@ -10,9 +10,9 @@
             margin-bottom: 35px;
             float: left;
         }
-    }
+    } */
 
-    .section {
+    /* .section {
         display: block;
         clear: both;
         position: relative;
@@ -27,12 +27,9 @@
             width: 50%;
             right: 5px;
         }
-    }
+    } */
 
     @mixin bg {
-        position: absolute;
-        top: -5px;
-        height: 570px;
         width: 100%;
         border-radius: 10px;
     }
@@ -56,8 +53,6 @@
         }
     }
 </style>
-
-
 
 
 <!--
@@ -148,10 +143,59 @@
     {children}
 </button>
 
+
+
+<!--
+  @frame { visible: false }
+-->
+<div export component as="Section" className:column="column" className:danger="danger" className:success="success" className:primary="primary" className:dark="dark">
+    <style>
+        display: flex;
+        margin-bottom: 10px;
+        grid-column-gap: 20px;
+        &.column {
+            flex-direction: column;
+        }
+        &.danger {
+            @include bg;
+            background: #E44258;  
+        }
+        &.success {
+            @include bg;
+            background: #00CA72; 
+        }
+        &.dark {
+            @include bg;
+            background: #323338; 
+        }
+        &.primary {
+            @include bg;
+            background: #0085FF; 
+        }
+    </style>
+    {children}
+</div>
+
 <!--
   @frame { visible: false, title: "" }
 -->
 
+<div export component as="Panel" className:column="column">
+    <style>
+        display: flex;
+        flex-direction: row;
+        grid-column-gap: 20px;
+        &.column {
+            flex-direction: column;
+        }
+    </style>
+    {children}
+</div>
+
+
+<!--
+  @frame { visible: false }
+-->
 <div export component as="Buttons" className="buttons">
     {children}
 </div>
@@ -161,233 +205,228 @@
 -->
 
 <Buttons>
-    <div className="panel">
-        <div className="panel-group">
+    <Panel>
+        <Panel column>
             <Button primary large>Button</Button>
             <Button primary medium>Button</Button>
             <Button primary small>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button primary large active>Button</Button>
             <Button primary medium active>Button</Button>
             <Button primary small active>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button large>Button</Button>
             <Button medium>Button</Button>
             <Button small>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button primary large active>Button</Button>
             <Button primary medium active>Button</Button>
             <Button primary small active>Button</Button>
-        </div>
-    </div>
+        </Panel>
+    </Panel>
 
 
-    <div className="panel">
-        <div className="panel-group">
+    <Panel>
+        <Panel column>
             <Button hollow large>Button</Button>
             <Button hollow medium>Button</Button>
             <Button hollow small>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button hollow large active>Button</Button>
             <Button hollow medium active>Button</Button>
             <Button hollow small active>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button large>Button</Button>
             <Button medium>Button</Button>
             <Button small>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button hollow primary large active>Button</Button>
             <Button hollow primary medium active>Button</Button>
             <Button hollow primary small active>Button</Button>
-        </div>
-    </div>
-
+        </Panel>
+    </Panel>
 
     
-    <div className="panel">
-        <div className="panel-group">
+    <Panel>
+        <Panel column>
             <Button hollow borderless large>Button</Button>
             <Button hollow borderless medium>Button</Button>
             <Button hollow borderless small>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button hollow borderless large active>Button</Button>
             <Button hollow borderless medium active>Button</Button>
             <Button hollow borderless small active>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button borderless large>Button</Button>
             <Button borderless medium>Button</Button>
             <Button borderless small>Button</Button>
-        </div>
+        </Panel>
 
-        <div className="panel-group">
+        <Panel column>
             <Button hollow borderless primary large active>Button</Button>
             <Button hollow borderless primary medium active>Button</Button>
             <Button hollow borderless primary small active>Button</Button>
-        </div>
-    </div>
+        </Panel>
+    </Panel>
 
-    <div className="section">
-        <div className="left">
-            <div className="panel">
-                <div className="panel-group">
+    <Section>
+        <Section column>
+            <Panel>
+                <Panel column>
                     <Button danger large>Button</Button>
                     <Button danger medium>Button</Button>
                     <Button danger small>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button danger large active>Button</Button>
                     <Button danger medium active>Button</Button>
                     <Button danger small active>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button large>Button</Button>
                     <Button medium>Button</Button>
                     <Button small>Button</Button>
-                </div>
-            </div>
+                </Panel>
+            </Panel>
 
-            <div className="panel">
-                <div className="panel-group">
+            <Panel>
+                <Panel column>
                     <Button danger hollow large>Button</Button>
                     <Button danger hollow medium>Button</Button>
                     <Button danger hollow small>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button danger hollow large active>Button</Button>
                     <Button danger hollow medium active>Button</Button>
                     <Button danger hollow small active>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button hollow large>Button</Button>
                     <Button hollow medium>Button</Button>
                     <Button hollow small>Button</Button>
-                </div>
-            </div>
+                </Panel>
+            </Panel>
 
-            <div className="panel">
-                <div className="panel-group">
+            <Panel>
+                <Panel column>
                     <Button danger large hollow borderless> Button</Button>
                     <Button danger medium hollow borderless>Button</Button>
                     <Button danger small hollow borderless>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button danger hollow large borderless active>Button</Button>
                     <Button danger hollow medium borderless active>Button</Button>
                     <Button danger hollow small borderless active>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button hollow borderless large>Button</Button>
                     <Button hollow borderless medium>Button</Button>
                     <Button hollow borderless small>Button</Button>
-                </div>
-            </div>
-        </div>
-        <div className="right bg-danger">
+                </Panel>
+            </Panel>
+        </Section>
+        <Section column danger>
 
-        </div>
-    </div>
+        </Section>
+    </Section>
 
-    <div className="section">
-        <div className="left">
-            <div className="panel">
-                <div className="panel-group">
+    <Section>
+        <Section column>
+            <Panel>
+                <Panel column>
                     <Button success large>Button</Button>
                     <Button success medium>Button</Button>
                     <Button success small>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button success large active>Button</Button>
                     <Button success medium active>Button</Button>
                     <Button success small active>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button large>Button</Button>
                     <Button medium>Button</Button>
                     <Button small>Button</Button>
-                </div>
-            </div>
+                </Panel>
+            </Panel>
 
 
-            <div className="panel">
-                <div className="panel-group">
+            <Panel>
+                <Panel column>
                     <Button success hollow large>Button</Button>
                     <Button success hollow medium>Button</Button>
                     <Button success hollow small>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button success hollow large active>Button</Button>
                     <Button success hollow medium active>Button</Button>
                     <Button success hollow small active>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button hollow large>Button</Button>
                     <Button hollow medium>Button</Button>
                     <Button hollow small>Button</Button>
-                </div>
-            </div>
+                </Panel>
+            </Panel>
 
-
-
-            <div className="panel">
-                <div className="panel-group">
+            <Panel>
+                <Panel column>
                     <Button success hollow borderless large>Button</Button>
                     <Button success hollow borderless medium>Button</Button>
                     <Button success hollow borderless small>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button success hollow borderless large active>Button</Button>
                     <Button success hollow borderless medium active>Button</Button>
                     <Button success hollow borderless small active>Button</Button>
-                </div>
+                </Panel>
 
-                <div className="panel-group">
+                <Panel column>
                     <Button hollow borderless large>Button</Button>
                     <Button hollow borderless medium>Button</Button>
                     <Button hollow borderless small>Button</Button>
-                </div>
-            </div>
-        </div>
-        <div className="right bg-success">
+                </Panel>
+            </Panel>
+        </Section>
+        <Section column success>
 
-        </div>
-    </div>
+        </Section>
+    </Section>
 
-    <div className="section">
-        <div className="left">
-            <div className="bg-dark">
-            </div>
-        </div>
-        <div className="right bg-primary">
+    <Section>
+        <Section column dark>
+        
+        </Section>
+        <Section column primary>
+        
+        </Section>
+    </Section>
 
-        </div>
-    </div>
-
-    
 </Buttons>
