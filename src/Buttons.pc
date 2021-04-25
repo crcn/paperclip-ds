@@ -29,6 +29,9 @@
         margin: 10px auto;
         background: #E6E9EF;
         color: #676879;
+        &.borderless {
+            border: none !important;
+        }
         &.hollow {
             background: none;
             border: 1px solid #C5C7D0;
@@ -95,7 +98,7 @@
                 color: #fff;
                 border: 1px solid #fff;
                 &.active {
-                    background: #676879;
+                    background: #B63546;
                 }
             }
         }
@@ -113,6 +116,14 @@
                     background: #CCF4E3;
                 }
             }
+            &.inverse {
+                background: none;
+                color: #fff;
+                border: 1px solid #fff;
+                &.active {
+                    background: #00A25B;
+                }
+            }
         }
         &.large {
             padding: 12px 24px;
@@ -124,9 +135,6 @@
         }
         &.small {
             padding: 5px 8px;
-        }
-        &.borderless {
-            border: none;
         }
     </style>
     {children}
@@ -175,7 +183,7 @@
     <style>
         display: flex;
         flex-direction: row;
-        grid-column-gap: 20px;
+        grid-column-gap: 34px;
         &.column {
             flex-direction: column;
         }
@@ -354,27 +362,27 @@
 
             <Panel>
                 <Panel column>
-                    <Button danger inverse borderless large>Button</Button>
-                    <Button danger inverse borderless medium>Button</Button>
-                    <Button danger inverse borderless small>Button</Button>
+                    <Button danger inverse large>Button</Button>
+                    <Button danger inverse medium>Button</Button>
+                    <Button danger inverse small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button success hollow borderless large active>Button</Button>
-                    <Button success hollow borderless medium active>Button</Button>
-                    <Button success hollow borderless small active>Button</Button>
+                    <Button danger inverse large active>Button</Button>
+                    <Button danger inverse medium active>Button</Button>
+                    <Button danger inverse small active>Button</Button>
                 </Panel>
             </Panel>
 
             <Panel>
                 <Panel column>
-                    <Button success hollow borderless large>Button</Button>
-                    <Button success hollow borderless medium>Button</Button>
-                    <Button success hollow borderless small>Button</Button>
+                    <Button danger large>Button</Button>
+                    <Button danger medium>Button</Button>
+                    <Button danger small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button success hollow borderless large active>Button</Button>
-                    <Button success hollow borderless medium active>Button</Button>
-                    <Button success hollow borderless small active>Button</Button>
+                    <Button danger borderless large active>Button</Button>
+                    <Button danger borderless medium active>Button</Button>
+                    <Button danger borderless small active>Button</Button>
                 </Panel>
             </Panel>
         </Section>
@@ -444,32 +452,38 @@
         <Section column success>
             <Panel>
                 <Panel column>
-                    <Button success hollow borderless large>Button</Button>
-                    <Button success hollow borderless medium>Button</Button>
+                    <Button large>Button</Button>
+                    <Button medium>Button</Button>
+                    <Button small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button success hollow borderless large active>Button</Button>
-                    <Button success hollow borderless medium active>Button</Button>
-                </Panel>
-            </Panel>
-            <Panel>
-                <Panel column>
-                    <Button success hollow borderless large>Button</Button>
-                    <Button success hollow borderless medium>Button</Button>
-                </Panel>
-                <Panel column>
-                    <Button success hollow borderless large active>Button</Button>
-                    <Button success hollow borderless medium active>Button</Button>
+                    <Button large active>Button</Button>
+                    <Button medium active>Button</Button>
+                    <Button small active>Button</Button>
                 </Panel>
             </Panel>
             <Panel>
                 <Panel column>
-                    <Button success hollow borderless large>Button</Button>
-                    <Button success hollow borderless medium>Button</Button>
+                    <Button success inverse large>Button</Button>
+                    <Button success inverse medium>Button</Button>
+                    <Button success inverse small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button success hollow borderless large active>Button</Button>
-                    <Button success hollow borderless medium active>Button</Button>
+                    <Button success inverse large active>Button</Button>
+                    <Button success inverse medium active>Button</Button>
+                    <Button success inverse small active>Button</Button>
+                </Panel>
+            </Panel>
+            <Panel>
+                <Panel column>
+                    <Button success borderless large>Button</Button>
+                    <Button success borderless medium>Button</Button>
+                    <Button success borderless small>Button</Button>
+                </Panel>
+                <Panel column>
+                    <Button success borderless large active>Button</Button>
+                    <Button success borderless medium active>Button</Button>
+                    <Button success borderless small active>Button</Button>
                 </Panel>
             </Panel>
         </Section>
