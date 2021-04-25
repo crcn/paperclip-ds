@@ -17,7 +17,7 @@
 <!--
   @frame { visible: false }
 -->
-<button export component as="Button" className:primary="primary" className:danger="danger" className:success="success" className:dark="dark" className:large="large" className:medium="medium" className:small="small" className:active="active" className:hollow="hollow" className:borderless="borderless"  className:inverse="inverse">
+<button export component as="Button" className:primary="primary" className:danger="danger" className:success="success" className:dark="dark" className:large="large" className:medium="medium" className:small="small" className:active="active" className:hollow="hollow" className:solid="solid" className:borderless="borderless"  className:inverse="inverse">
     <style>
         border-radius: 4px;
         font-family: 'Roboto';
@@ -43,6 +43,14 @@
         &.primary {
             background: #0085FF;
             color: #FFFFFF;
+            &.solid {
+                color: #0085FF;
+                background: #fff;
+                &.active {
+                    background: #E6E9EF;
+                    color: #0085FF;
+                }
+            }
             &.active {
                 background: #0071D9;
                 color: #FFFFFF;
@@ -66,6 +74,14 @@
         &.dark {
             background: #323338;
             color: white;
+            &.solid {
+                color: #323338;
+                background: #fff;
+                &.active {
+                    background: #E6E9EF;
+                    color: #323338;
+                }
+            }
             &.active {
                 background: #676879;
             }
@@ -81,6 +97,14 @@
         &.danger {
             background: #E44258;
             color: #FFFFFF;
+            &.solid {
+                color: #E44258;
+                background: #fff;
+                &.active {
+                    background: #E6E9EF;
+                    color: #E44258;
+                }
+            }
             &.active {
                 background: #B63546;
                 color: #FFFFFF;
@@ -105,6 +129,14 @@
         &.success {
             background: #00CA72;
             color: #FFFFFF;
+            &.solid {
+                color: #00CA72;
+                background: #fff;
+                &.active {
+                    background: #E6E9EF;
+                    color: #00CA72;
+                }
+            }
             &.active {
                 background: #00A25B;
             }
@@ -349,14 +381,14 @@
         <Section column danger>
             <Panel>
                 <Panel column>
-                    <Button large>Button</Button>
-                    <Button medium>Button</Button>
-                    <Button small>Button</Button>
+                    <Button danger solid large>Button</Button>
+                    <Button danger solid medium>Button</Button>
+                    <Button danger solid small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button large active>Button</Button>
-                    <Button medium active>Button</Button>
-                    <Button small active>Button</Button>
+                    <Button danger solid large active>Button</Button>
+                    <Button danger solid medium active>Button</Button>
+                    <Button danger solid small active>Button</Button>
                 </Panel>
             </Panel>
 
@@ -452,14 +484,14 @@
         <Section column success>
             <Panel>
                 <Panel column>
-                    <Button large>Button</Button>
-                    <Button medium>Button</Button>
-                    <Button small>Button</Button>
+                    <Button success solid large>Button</Button>
+                    <Button success solid medium>Button</Button>
+                    <Button success solid small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button large active>Button</Button>
-                    <Button medium active>Button</Button>
-                    <Button small active>Button</Button>
+                    <Button success solid large active>Button</Button>
+                    <Button success solid medium active>Button</Button>
+                    <Button success solid small active>Button</Button>
                 </Panel>
             </Panel>
             <Panel>
@@ -493,14 +525,14 @@
         <Section column dark>
             <Panel>
                 <Panel column>
-                    <Button large>Button</Button>
-                    <Button medium>Button</Button>
-                    <Button small>Button</Button>
+                    <Button dark solid large>Button</Button>
+                    <Button dark solid medium>Button</Button>
+                    <Button dark solid small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button large>Button</Button>
-                    <Button medium>Button</Button>
-                    <Button small>Button</Button>
+                    <Button dark solid large active>Button</Button>
+                    <Button dark solid medium active>Button</Button>
+                    <Button dark solid small active>Button</Button>
                 </Panel>
             </Panel>
 
@@ -533,14 +565,14 @@
         <Section column primary>
             <Panel>
                 <Panel column>
-                    <Button large>Button</Button>
-                    <Button medium>Button</Button>
-                    <Button small>Button</Button>
+                    <Button primary solid large>Button</Button>
+                    <Button primary solid medium>Button</Button>
+                    <Button primary solid small>Button</Button>
                 </Panel>
                 <Panel column>
-                    <Button large>Button</Button>
-                    <Button medium>Button</Button>
-                    <Button small>Button</Button>
+                    <Button primary solid large active>Button</Button>
+                    <Button primary solid medium active>Button</Button>
+                    <Button primary solid small active>Button</Button>
                 </Panel>
             </Panel>
             <Panel>
