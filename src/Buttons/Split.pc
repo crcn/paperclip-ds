@@ -1,4 +1,4 @@
-<button export component as="Button" className:primary="primary" className:secondary="secondary"  className:inverse="inverse" className:active="active" className:hover="hover">
+<button export component as="Button" className:primary="primary" className:secondary="secondary"  className:inverse="inverse" className:borderless="borderless" className:active="active" className:hover="hover">
     <style>
         border-radius: 4px;
         font-family: 'Roboto';
@@ -71,6 +71,18 @@
                         border-left: 1px solid #C5C7D0;
                     }
                 }
+                &.hover {
+                    &:after {
+                        background: #DFF0FF;
+                        border-left: 1px solid #DFF0FF;
+                    }
+                }
+            }
+            &.borderless {
+                border: none;
+                &:after {
+                    border: none;
+                }
             }
         }
     </style>
@@ -105,14 +117,14 @@
         <Button secondary>Button</Button>
         <Button secondary inverse active>Button</Button>
         <Button secondary active>Button</Button>
-        <Button secondary hover>Button</Button>
+        <Button secondary inverse >Button</Button>
     </Panel>
 
 
     <Panel>
-        <Button primary>Button</Button>
-        <Button primary hover>Button</Button>
-        <Button primary active>Button</Button>
-        <Button primary hover>Button</Button>
+        <Button secondary borderless>Button</Button>
+        <Button secondary borderless inverse active>Button</Button>
+        <Button secondary borderless active>Button</Button>
+        <Button secondary borderless inverse hover>Button</Button>
     </Panel>
 </SplitButton>
