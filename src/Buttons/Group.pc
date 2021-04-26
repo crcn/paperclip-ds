@@ -1,0 +1,38 @@
+<div export component as="ButtonGroup">
+    <style>
+
+    </style>
+    {children}
+</div>
+
+<button export component as="Button">
+    <style>
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        border: 1px solid #C5C7D0;
+        margin: 10px auto;
+        background: #E6E9EF;
+        color: #676879;
+    </style>
+    {children}
+</button>
+
+<div>
+
+    <ButtonGroup>
+        <Button>Button</Button>
+        <Button>Button</Button>
+        <Button>Button</Button>
+    </ButtonGroup>
+
+
+    <ButtonGroup>
+        <Button>Button</Button>
+        <Button>Button</Button>
+        <Button>Button</Button>
+    </ButtonGroup>
+
+</div>

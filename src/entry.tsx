@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ui from "./hello-paperclip.pc";
 import * as monday from "./monday.pc";
-import * as button from "./Buttons.pc";
 import * as ReactDOM from "react-dom";
+import "./Buttons/Index.tsx";
 
 const mount = document.createElement("div");
 document.body.appendChild(mount);
