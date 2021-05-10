@@ -1,163 +1,168 @@
 <div export component as="Dropdown">
-    <style>
-        display: flex;
-        flex-direction: row;
-        grid-column-gap: 42px;
-        padding: 20px;
-    </style>
-    {children}
+  <style>
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 42px;
+    padding: 20px;
+  </style>
+  {children}
 </div>
-<div export component as="Label" className:form-control="form-control" className:hover="hover" className:form-control="form-control" className:focus="focus" className:negative="negative" className:positive="positive" className:cross-icon="cross-icon" className:search-icon="search-icon" className:dropdown="dropdown">
-    <style>
-        margin: 13px 0;
-        .large{
-
-        }
-        .form-control{
-            padding: 11px 10px;
-            width: 100%;
-            border: 1px solid #C5C7D0;
-            box-sizing: border-box;
-            border-radius: 4px;
-            background-image: url('../../assets/down-icon.svg');
-            background-repeat: no-repeat;
-            background-position: right 15px center;
-            background-color: transparent;
-            color: #676879;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            &.hover{
-                border: 1px solid #323338;
-            }
-            &.focus{
-                border: 1px solid #0085FF;
-            }
-            &.negative{
-                border: 1px solid #E44258;
-            }
-            &.positive{
-                border: 1px solid #00CA72;
-            }
-            &.disabled{
-                border-color: transparent;
-                background-color: #E6E9EF;
-            }
-            &.large{
-                padding: 15px 10px;
-            }
-            &.small{
-                padding: 7px 10px;
-            }
-        }
-        small{
-            color: #E44258;
-        }
-    </style>
-    {children}
+<div export
+  component
+  as="Label"
+  className:form-control="form-control"
+  className:hover="hover"
+  className:form-control="form-control"
+  className:focus="focus"
+  className:negative="negative"
+  className:positive="positive"
+  className:cross-icon="cross-icon"
+  className:search-icon="search-icon"
+  className:dropdown="dropdown">
+  <style>
+    margin: 13px 0;
+    .large {}
+    .form-control {
+      padding: 11px 10px;
+      width: 100%;
+      border: 1px solid #C5C7D0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background-image: url('../../assets/down-icon.svg');
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-color: transparent;
+      color: #676879;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      &.hover {
+        border: 1px solid #323338;
+      }
+      &.focus {
+        border: 1px solid #0085FF;
+      }
+      &.negative {
+        border: 1px solid #E44258;
+      }
+      &.positive {
+        border: 1px solid #00CA72;
+      }
+      &.disabled {
+        border-color: transparent;
+        background-color: #E6E9EF;
+      }
+      &.large {
+        padding: 15px 10px;
+      }
+      &.small {
+        padding: 7px 10px;
+      }
+    }
+    small {
+      color: #E44258;
+    }
+  </style>
+  {children}
 </div>
 
 
 <div export component as="Panel">
-    <style>
-        width: 100%;
-        .dropdown{
-            width: 100%;
-            height: 160px;
-            background: #FFFFFF;
-            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 4px;
-        }
-    </style>
-    {children}
+  <style>
+    width: 100%;
+    .dropdown {
+      width: 100%;
+      height: 160px;
+      background: #FFFFFF;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+  </style>
+  {children}
 </div>
 
 <Dropdown>
-    <Panel>
-        <Label>
-            <select className="form-control large">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control large hover">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control large disabled">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control large focus">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control large">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label dropdown>
-        </Label>    
-    </Panel>
-    <Panel>
-        <Label>
-            <select className="form-control">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control hover">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control disabled">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control focus">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label dropdown>
-        </Label>    
-    </Panel>
-    <Panel>
-        <Label>
-            <select className="form-control small">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control small hover">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control small disabled">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control small focus">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>
-        <Label>
-            <select className="form-control small">
-                <option>Placeholder text here</option>
-            </select>
-        </Label>   
-        <Label dropdown>
-        </Label>     
-    </Panel>
-     
+  <Panel>
+    <Label>
+      <select className="form-control large">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control large hover">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control large disabled">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control large focus">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control large">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label dropdown />
+  </Panel>
+  <Panel>
+    <Label>
+      <select className="form-control">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control hover">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control disabled">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control focus">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label dropdown />
+  </Panel>
+  <Panel>
+    <Label>
+      <select className="form-control small">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control small hover">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control small disabled">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control small focus">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label>
+      <select className="form-control small">
+        <option>Placeholder text here</option>
+      </select>
+    </Label>
+    <Label dropdown />
+  </Panel>
 </Dropdown>

@@ -1,76 +1,92 @@
 <div export component as="Attention">
-    <style>
-        padding: 30px;
-        display: flex;
-        box-sizing: border-box;
-        flex-direction: row;
-        grid-column-gap: 30px;
-        max-width: 800px;
-    </style>
-    {children}
+  <style>
+    padding: 30px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    grid-column-gap: 30px;
+    max-width: 800px;
+  </style>
+  {children}
 </div>
-<div export component as="Label" className:att1="att1" className:att2="att2" className:att3="att3" className:att4="att4">
-    <style>
-        margin: 15px 0;
-        background: #DFF0FF;
-        border-radius: 8px;
-        box-sizing: border-box;
-        padding: 15px 16px;
-        display: inline-block;
-        width: 100%;
-        h3{
-            font-size: 18px;
-            img{
-                margin-right: 15px;
-            }
-        }
-        p{
-            font-size: 14px;
-        }
-        &.att1{
-            background: #DFF0FF;
-        }
-        &.att2{
-            background: #CCF4E3;
-        }
-        &.att3{
-            background: #F9DADE;
-        }
-        &.att4{
-            background: #F5F6F8;
-        }
-    </style>
-    {children}
+<div export
+  component
+  as="Label"
+  className:att1="att1"
+  className:att2="att2"
+  className:att3="att3"
+  className:att4="att4">
+  <style>
+    margin: 15px 0;
+    background: #DFF0FF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    display: inline-block;
+    width: 100%;
+    h3 {
+      font-size: 18px;
+      img {
+        margin-right: 15px;
+      }
+    }
+    p {
+      font-size: 14px;
+    }
+    &.att1 {
+      background: #DFF0FF;
+    }
+    &.att2 {
+      background: #CCF4E3;
+    }
+    &.att3 {
+      background: #F9DADE;
+    }
+    &.att4 {
+      background: #F5F6F8;
+    }
+  </style>
+  {children}
 </div>
 
 <div export component as="Panel">
-    <style>
-        /* width: 100%; */
-    </style>
-    {children}
+  <style>
+  </style>
+  {children}
 </div>
 
 
 <Attention>
-    <Panel>
-        <Label att1>
-            <h3><img src="../../assets/att1.svg" />Attention box title</h3>
-            <p>Studies show that 100% of people who celebrate birthdays, will eventually die.</p>
-        </Label>
-        <Label att2>
-            <h3><img src="../../assets/att3.svg" />Attention box title</h3>
-            <p>Studies show that 100% of people who celebrate birthdays, will eventually die.</p>
-        </Label>
-    </Panel>
-     <Panel>
-        <Label att3>
-            <h3><img src="../../assets/att2.svg" />Attention box title</h3>
-            <p>Studies show that 100% of people who celebrate birthdays, will eventually die.</p>
-        </Label>
-        <Label att4>
-            <h3><img src="../../assets/att4.svg" />Attention box title</h3>
-            <p>Studies show that 100% of people who celebrate birthdays, will eventually die.</p>
-        </Label>
-    </Panel>
-   
+  <Panel>
+    <Label att1>
+      <h3><img src="../../assets/att1.svg" />Attention box title</h3>
+      <p>
+        Studies show that 100% of people who celebrate birthdays, will
+        eventually die.
+      </p>
+    </Label>
+    <Label att2>
+      <h3><img src="../../assets/att3.svg" />Attention box title</h3>
+      <p>
+        Studies show that 100% of people who celebrate birthdays, will
+        eventually die.
+      </p>
+    </Label>
+  </Panel>
+  <Panel>
+    <Label att3>
+      <h3><img src="../../assets/att2.svg" />Attention box title</h3>
+      <p>
+        Studies show that 100% of people who celebrate birthdays, will
+        eventually die.
+      </p>
+    </Label>
+    <Label att4>
+      <h3><img src="../../assets/att4.svg" />Attention box title</h3>
+      <p>
+        Studies show that 100% of people who celebrate birthdays, will
+        eventually die.
+      </p>
+    </Label>
+  </Panel>
 </Attention>

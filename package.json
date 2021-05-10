@@ -8,7 +8,8 @@
     "start": "concurrently \"paperclip build --definition --write --watch\" \"webpack serve --open\"",
     "build:watch": "concurrently \"paperclip build --definition --write --watch\" \"webpack --watch\"",
     "build:definitions": "paperclip build --definition --write",
-    "snapshot": "percy exec -- percy-paperclip"
+    "snapshot": "percy exec -- percy-paperclip",
+    "format": "prettier \"src/**/*.{pc,js,ts,tsx,css,json}\" --write"
   },
   "license": "",
   "dependencies": {
@@ -27,6 +28,9 @@
     "paperclip-loader": "^17.8.9",
     "percy": "^0.28.6",
     "percy-paperclip": "^17.8.9",
+    "prettier": "^2.3.0",
+    "prettier-plugin-paperclip": "^17.9.1",
+    "pretty-quick": "^3.1.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^9.0.0",
     "typescript": "^4.2.4",

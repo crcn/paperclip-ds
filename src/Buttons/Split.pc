@@ -1,130 +1,138 @@
-<button export component as="Button" className:primary="primary" className:secondary="secondary"  className:inverse="inverse" className:borderless="borderless" className:active="active" className:hover="hover">
-    <style>
-        border-radius: 4px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: normal;
-        line-height: 24px;
+<button export
+  component
+  as="Button"
+  className:primary="primary"
+  className:secondary="secondary"
+  className:inverse="inverse"
+  className:borderless="borderless"
+  className:active="active"
+  className:hover="hover">
+  <style>
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    border: none;
+    margin: 10px auto;
+    color: #FFFFFF;
+    padding: 12px 50px 12px 20px;
+    font-size: 16px;
+    margin-right: 15px;
+    position: relative;
+    &.primary {
+      background: #0085FF;
+      &:after {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 0px;
+        top: 0px;
+        padding: 0 7px;
+        height: 100%;
+        content: "url('../../assets/chevron-arrow-down.png')";
+        border-left: 1px solid #0071D9;
+        border-radius: 0 4px 4px 0;
+      }
+      &.active {
+        background: #0071D9;
+        &:after {
+          background: #0085FF;
+          border-left: 1px solid #0085FF;
+        }
+      }
+      &.hover {
+        &:after {
+          background: #0071D9;
+          border-left: 1px solid #0071D9;
+        }
+      }
+    }
+    &.secondary {
+      color: #323338;
+      background: none;
+      border: 1px solid #C5C7D0;
+      &:after {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 0px;
+        top: 0px;
+        padding: 0 5px;
+        height: 100%;
+        content: "url('../../assets/chevron-arrow-down-dark.png')";
+        border-left: 1px solid #C5C7D0;
+        border-radius: 0 4px 4px 0;
+      }
+      &.active {
+        background: #C5C7D0;
+        &:after {
+          background: #E6E9EF;
+          border-left: 1px solid #E6E9EF;
+        }
+      }
+      &.inverse {
+        background: #E6E9EF;
+        &.active {
+          &:after {
+            background: #C5C7D0;
+            border-left: 1px solid #C5C7D0;
+          }
+        }
+        &.hover {
+          &:after {
+            background: #DFF0FF;
+            border-left: 1px solid #DFF0FF;
+          }
+        }
+      }
+      &.borderless {
         border: none;
-        margin: 10px auto;
-        color: #FFFFFF;
-        padding: 12px 50px 12px 20px;
-        font-size: 16px;
-        margin-right: 15px;
-        position: relative;
-        &.primary {
-            background: #0085FF;
-            &:after {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                right: 0px;
-                top: 0px;
-                padding: 0 7px;
-                height: 100%;
-                content: "url('../../assets/chevron-arrow-down.png')";
-                border-left: 1px solid #0071D9;
-                border-radius: 0 4px 4px 0;
-            }
-            &.active {
-                background: #0071D9;
-                &:after {
-                    background: #0085FF;
-                    border-left: 1px solid #0085FF;
-                }
-            }
-            &.hover {
-                &:after {
-                    background: #0071D9;
-                    border-left: 1px solid #0071D9;
-                }
-            }
+        &:after {
+          border: none;
         }
-        &.secondary {
-            color: #323338;
-            background: none;
-            border: 1px solid #C5C7D0;
-            &:after {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                right: 0px;
-                top: 0px;
-                padding: 0 5px;
-                height: 100%;
-                content: "url('../../assets/chevron-arrow-down-dark.png')";
-                border-left: 1px solid #C5C7D0;
-                border-radius: 0 4px 4px 0;
-            }
-            &.active {
-                background: #C5C7D0;
-                &:after {
-                    background: #E6E9EF;
-                    border-left: 1px solid #E6E9EF;
-                }
-            }
-            &.inverse {
-                background: #E6E9EF;
-                &.active {
-                    &:after {
-                        background: #C5C7D0;
-                        border-left: 1px solid #C5C7D0;
-                    }
-                }
-                &.hover {
-                    &:after {
-                        background: #DFF0FF;
-                        border-left: 1px solid #DFF0FF;
-                    }
-                }
-            }
-            &.borderless {
-                border: none;
-                &:after {
-                    border: none;
-                }
-            }
-        }
-    </style>
-    {children}
+      }
+    }
+  </style>
+  {children}
 </button>
 
 <div export component as="Panel">
-    <style>
-        display: block;
-        margin-bottom: 36px;
-    </style>
-    {children}
+  <style>
+    display: block;
+    margin-bottom: 36px;
+  </style>
+  {children}
 </div>
 
 <div export component as="SplitButton">
-    <style>
-        padding: 20px;
-    </style>
-    {children}
+  <style>
+    padding: 20px;
+  </style>
+  {children}
 </div>
 
 
 <SplitButton>
-    <Panel>
-        <Button primary>Button</Button>
-        <Button primary hover>Button</Button>
-        <Button primary active>Button</Button>
-        <Button primary hover>Button</Button>
-    </Panel>
+  <Panel>
+    <Button primary>Button</Button>
+    <Button primary hover>Button</Button>
+    <Button primary active>Button</Button>
+    <Button primary hover>Button</Button>
+  </Panel>
 
-    <Panel>
-        <Button secondary>Button</Button>
-        <Button secondary inverse active>Button</Button>
-        <Button secondary active>Button</Button>
-        <Button secondary inverse >Button</Button>
-    </Panel>
+  <Panel>
+    <Button secondary>Button</Button>
+    <Button secondary inverse active>Button</Button>
+    <Button secondary active>Button</Button>
+    <Button secondary inverse>Button</Button>
+  </Panel>
 
 
-    <Panel>
-        <Button secondary borderless>Button</Button>
-        <Button secondary borderless inverse active>Button</Button>
-        <Button secondary borderless active>Button</Button>
-        <Button secondary borderless inverse hover>Button</Button>
-    </Panel>
+  <Panel>
+    <Button secondary borderless>Button</Button>
+    <Button secondary borderless inverse active>Button</Button>
+    <Button secondary borderless active>Button</Button>
+    <Button secondary borderless inverse hover>Button</Button>
+  </Panel>
 </SplitButton>

@@ -2,603 +2,619 @@
   @frame { visible: false }
 -->
 <div export component as="Main">
-    <style>
-        margin: 25px;
-        width: 570px;
-    </style>
-    {children}
+  <style>
+    margin: 25px;
+    width: 570px;
+  </style>
+  {children}
 </div>
 <!--
   @frame { visible: false }
 -->
 <div export component as="Menu">
-    <style>
-        margin: 25px;
-    </style>
-    {children}
+  <style>
+    margin: 25px;
+  </style>
+  {children}
 </div>
 <!--
   @frame { visible: false }
 -->
 <div export component as="OtherMenus">
-    <style>
-        margin: 25px;
-        display: flex;
-        grid-column-gap: 40px;
-        flex-direction: row;
-    </style>
-    {children}
+  <style>
+    margin: 25px;
+    display: flex;
+    grid-column-gap: 40px;
+    flex-direction: row;
+  </style>
+  {children}
 </div>
 
 <!--
   @frame { visible: false }
 -->
 <div export component as="Panel">
-    <style>
-        width: 240px;
-        margin: 30px 0;
-        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        box-sizing: border-box;
-    </style>
-    {children}
+  <style>
+    width: 240px;
+    margin: 30px 0;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box;
+  </style>
+  {children}
 </div>
 
 <!--
   @frame { visible: false }
 -->
 <div export component as="Caption" className:center="center">
-    <style>
-        display: flex;
-        flex-direction: row;
-        padding: 8px 0;
-        &.center{
-            text-align: center;
-            position: relative;
-            padding: 0;
-            &:after{
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translate(0, -50%);
-                width: 100%;
-                height: 1px;
-                background: #E6E9EF;
-            }
-            span{
-                background: #fff;
-                display: table;
-                width: auto;
-                margin: 0 auto;
-                padding: 0 5px;
-                position: relative;
-                z-index: 2;
-            }
-        }
-        span{
-            padding: 0 15px;
-            width: 100%;
-            color: #676879;
-        }
-        .back{
-            text-align: right;
-            color: #323338;
-        }
-    </style>
-    {children}
+  <style>
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0;
+    &.center {
+      text-align: center;
+      position: relative;
+      padding: 0;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: 100%;
+        height: 1px;
+        background: #E6E9EF;
+      }
+      span {
+        background: #fff;
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        padding: 0 5px;
+        position: relative;
+        z-index: 2;
+      }
+    }
+    span {
+      padding: 0 15px;
+      width: 100%;
+      color: #676879;
+    }
+    .back {
+      text-align: right;
+      color: #323338;
+    }
+  </style>
+  {children}
 </div>
 
 <div export component as="Button">
-    <style>
-        padding: 7px 7px 0;
-        button{
-            background: rgba(163, 88, 223, 0.3);
-            border-radius: 4px;
-            border: none;
-            padding: 5px 10px;
-            color: #323338;
-            margin: 4px;
-            &.design{
-                background: rgba(163, 88, 223, 0.3);
-            }
-            &.rd{
-                background: #F9DADE;
-            }
-            &.sales{
-                background: rgba(255, 203, 0, 0.3);
-            }
-            &.partners{
-                background: #CCF4E3;
-            }
-            &.it{
-                background: #DFF0FF;
-            }
-        }
-    </style>
-    {children}
+  <style>
+    padding: 7px 7px 0;
+    button {
+      background: rgba(163, 88, 223, 0.3);
+      border-radius: 4px;
+      border: none;
+      padding: 5px 10px;
+      color: #323338;
+      margin: 4px;
+      &.design {
+        background: rgba(163, 88, 223, 0.3);
+      }
+      &.rd {
+        background: #F9DADE;
+      }
+      &.sales {
+        background: rgba(255, 203, 0, 0.3);
+      }
+      &.partners {
+        background: #CCF4E3;
+      }
+      &.it {
+        background: #DFF0FF;
+      }
+    }
+  </style>
+  {children}
 </div>
 
 <div export component as="Search">
-    <style>
-        padding: 0 11px;
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 7px;
-        display: inline-block;
-        input{
-            box-sizing: border-box;
-            width: 100%;
-            border: 1px solid #C5C7D0;
-            box-sizing: border-box;
-            border-radius: 4px;
-            padding: 8px 15px;
-            color: #676879;
-        }
-    </style>
-    {children}
+  <style>
+    padding: 0 11px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 7px;
+    display: inline-block;
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      border: 1px solid #C5C7D0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 8px 15px;
+      color: #676879;
+    }
+  </style>
+  {children}
 </div>
 
 <ul export component as="List">
-    <style>
-        margin: 0;
-        padding: 7px 11px;
-    </style>
-    {children}
+  <style>
+    margin: 0;
+    padding: 7px 11px;
+  </style>
+  {children}
 </ul>
-<li export component as="Item" className:hover="hover" className:disabled="disabled" className:center="center" className:colored="colored" className:red="red" className:green="green" className:yellow="yellow" className:blue="blue">
-    <style>
-        list-style: none;
-        padding: 3px 0 1px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        vertical-align: text-top;
-        &.colored{
-            padding: 7px 5px 4px;
-        }
-        &.red{
-            color: #F65F7C;
-        }
-        &.green{
-            color: #00CA72;
-        }
-        &.yellow{
-            color: #FDAB3D;
-        }
-        &.blue{
-            color: #0071D9;
-        }
-        &.hover{
-            background: #E6E9EF;
-            border-radius: 4px;
-        }
-        &.disabled{
-            opacity: 0.55;
-        }
-        &.center{
-            text-align: center;
-        }
-        img{
-            vertical-align: middle;
-            width: 35px;
-            height: 28px;
-            object-fit: none;
-            display: inline;
-            position: relative;
-            top: -3px;
-        }
-    </style>
-    {children}
+<li export
+  component
+  as="Item"
+  className:hover="hover"
+  className:disabled="disabled"
+  className:center="center"
+  className:colored="colored"
+  className:red="red"
+  className:green="green"
+  className:yellow="yellow"
+  className:blue="blue">
+  <style>
+    list-style: none;
+    padding: 3px 0 1px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    vertical-align: text-top;
+    &.colored {
+      padding: 7px 5px 4px;
+    }
+    &.red {
+      color: #F65F7C;
+    }
+    &.green {
+      color: #00CA72;
+    }
+    &.yellow {
+      color: #FDAB3D;
+    }
+    &.blue {
+      color: #0071D9;
+    }
+    &.hover {
+      background: #E6E9EF;
+      border-radius: 4px;
+    }
+    &.disabled {
+      opacity: 0.55;
+    }
+    &.center {
+      text-align: center;
+    }
+    img {
+      vertical-align: middle;
+      width: 35px;
+      height: 28px;
+      object-fit: none;
+      display: inline;
+      position: relative;
+      top: -3px;
+    }
+  </style>
+  {children}
 </li>
 
 
 <div export component as="Line">
-    <style>
-        height: 1px;
-        background: #E6E9EF;
-        box-sizing: border-box;
-        border: none;
-        /* vertical-align: top; */
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: block;
-    </style>
-    {children}
+  <style>
+    height: 1px;
+    background: #E6E9EF;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+  </style>
+  {children}
 </div>
 
 
 <div export component as="Checkbox">
-    <style>
-        padding: 0 6px 3px;
-        .checkbox {
-            width: 100%;
-            display: inline-block;
-            position: relative;
-            padding-left: 25px;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-                &:checked ~ span {
-                    background: #0085FF;
-                    border-color: transparent;
-                    &:after {
-                        display: block;
-                    }
-                }
-                &:hover ~ span {
-                    border-color: transparent;
-                    background: #0071D9;
-                }
-            }
-            &:hover {
-                input ~ span {
-                    border: 1px solid #323338;
-                }
-            }
-            &.hover{
-                input ~ span {
-                    border: 1px solid #323338;
-                }
-            }
-            &.selected-hover input:checked ~ span{
-                background: #0071D9;
-            }
-            &.disabled span{
-                background: #E6E9EF;
-                border-color: transparent;
-            }
-            &.disabled {
-                span{
-                    background: #E6E9EF;
-                    border-color: transparent;
-                }
-                input:checked ~ span {
-                    background: #E6E9EF;
-                    border-color: transparent;
-                    &:after{
-                        border-color: #676879;
-                    }
-                }
-            }
+  <style>
+    padding: 0 6px 3px;
+    .checkbox {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ span {
+          background: #0085FF;
+          border-color: transparent;
+          &:after {
+            display: block;
+          }
         }
+        &:hover ~ span {
+          border-color: transparent;
+          background: #0071D9;
+        }
+      }
+      &:hover {
+        input ~ span {
+          border: 1px solid #323338;
+        }
+      }
+      &.hover {
+        input ~ span {
+          border: 1px solid #323338;
+        }
+      }
+      &.selected-hover input:checked ~ span {
+        background: #0071D9;
+      }
+      &.disabled span {
+        background: #E6E9EF;
+        border-color: transparent;
+      }
+      &.disabled {
         span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 14px;
-            width: 14px;
-            border: 1px solid #C5C7D0;
-            &:after {
-                content: "";
-                position: absolute;
-                left: 4px;
-                top: 2px;
-                width: 4px;
-                height: 7px;
-                border: solid white;
-                border-width: 0 2px 2px 0;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-                display: none;
-            }
+          background: #E6E9EF;
+          border-color: transparent;
         }
+        input:checked ~ span {
+          background: #E6E9EF;
+          border-color: transparent;
+          &:after {
+            border-color: #676879;
+          }
+        }
+      }
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 14px;
+      width: 14px;
+      border: 1px solid #C5C7D0;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 2px;
+        width: 4px;
+        height: 7px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        display: none;
+      }
+    }
 
-    </style>
-    {children}
+  </style>
+  {children}
 </div>
-<label export component as="Label" className:checkbox="checkbox" className:hover="hover" className:selected-hover="selected-hover" className:disabled="disabled">
-    {children}
+<label export
+  component
+  as="Label"
+  className:checkbox="checkbox"
+  className:hover="hover"
+  className:selected-hover="selected-hover"
+  className:disabled="disabled">
+  {children}
 </label>
 
 <!--
   @frame { title: "Buttons", width: 1024, height: 2253, x: 0, y: 0 }
 -->
 <Main>
-    <Menu>
-        <Panel>
-            <Caption>
-                <span className="caption">Caption</span>
-                <span className="back">Back</span>
-            </Caption>
-            <Line></Line>
-            <Button>
-                <button className="design">Design</button>
-                <button className="rd">R&D</button>
-                <button className="sales">Sales</button>
-                <button className="partners">Partners</button>
-                <button className="it">IT</button>
-            </Button>
-            <Search>
-                <input type="text" placeholder="Placeholder text here" />
-            </Search>
-            <List>
-                <Item><img src="../../assets/1.svg" /> Send email</Item>
-                <Item><img src="../../assets/2.svg" /> Delete</Item>
-                <Item><img src="../../assets/3.svg" /> Shortcuts</Item>
-            </List>
-            <Line></Line>
-            <Caption>
-                <span className="caption">Caption</span>
-            </Caption>
-            <List>
-                <Item><img src="../../assets/4.svg" /> Announcements</Item>
-                <Item><img src="../../assets/5.svg" /> Dark mode</Item>
-                <Item><img src="../../assets/6.svg" /> Message</Item>
-                <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
-            </List>
-            <Line></Line>
-            <List>
-                <Item><img src="../../assets/8.svg" /> Info</Item>
-                <Item disabled><img src="../../assets/9.svg" /> When disabled</Item>
-            </List>
-            <Line></Line>
-            <List>
-                <Item><img src="../../assets/10.svg" /> Send feedback</Item>
-                <Item><img src="../../assets/11.svg" /> Setting</Item>
-            </List>
-            <Line></Line>
-            <List>
-                <Item center><img src="../../assets/menu-edit.svg" /> Edit</Item>
-            </List>
-        </Panel>
-    </Menu>
-    <OtherMenus>
-        <Left>
-            <Panel>
-                <Search>
-                    <input type="text" placeholder="Placeholder text here" />
-                </Search>
-                <List>
-                    <Item><img src="../../assets/1.svg" /> Send email</Item>
-                    <Item><img src="../../assets/2.svg" /> Delete</Item>
-                    <Item><img src="../../assets/4.svg" /> Announcements</Item>
-                    <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
-                    <Item><img src="../../assets/8.svg" /> Info</Item>
-                    <Item><img src="../../assets/10.svg" /> Send feedback</Item>
-                    <Item><img src="../../assets/11.svg" /> Setting</Item>
-                </List>
-            </Panel>
-            <Panel>
-                <Caption>
-                    <span className="caption">Caption</span>
-                    <span className="back">Back</span>
-                </Caption>
-                <Line></Line>
-                <Search>
-                    <input type="text" placeholder="Placeholder text here" />
-                </Search>
-                <List>
-                    <Item><img src="../../assets/8.svg" /> Info</Item>
-                    <Item disabled><img src="../../assets/9.svg" /> When disabled</Item>
-                    <Item><img src="../../assets/10.svg" /> Send feedback</Item>
-                    <Item><img src="../../assets/11.svg" /> Setting</Item>
-                </List>
-                <Line></Line>
-                <List>
-                    <Item><img src="../../assets/menu-edit.svg" /> Action <img src="../../assets/down-icon.svg" /></Item>
-                </List>
-            </Panel>
-            <Panel>
-                <Caption>
-                    <span className="caption">Caption</span>
-                    <span className="back">+ New tag</span>
-                </Caption>
-                <Line></Line>
-                <Search>
-                    <input type="text" placeholder="Placeholder text here" />
-                </Search>
-                <List>
-                    <Item colored blue>#yo</Item>
-                    <Item colored yellow>#Cheese</Item>
-                    <Item colored red>#new</Item>
-                    <Item colored hover>#Support</Item>
-                    <Item colored green>#love us</Item>
-                </List>
-                <Line></Line>
-                <List>
-                    <Item center>Manage tags</Item>
-                </List>
-            </Panel>
-            <Panel>
-                <Caption>
-                    <span className="caption">Caption</span>
-                    <span className="back">+ New tag</span>
-                </Caption>
-                <Line></Line>
-                <Search>
-                    <input type="text" placeholder="Placeholder text here" />
-                </Search>
-                <List>
-                    <Item><img src="../../assets/dp.svg" />Aviram Gabay</Item>
-                </List>
-                <Caption center>
-                    <span className="caption">People</span>
-                </Caption>
-                <List>
-                    <Item><img src="../../assets/d2.svg" />Aviram Gabay</Item>
-                    <Item><img src="../../assets/d3.svg" />Aviram Gabay</Item>
-                </List>
-                <Caption center>
-                    <span className="caption">Team</span>
-                </Caption>
-                <List>
-                    <Item><img src="../../assets/d4.svg" />Aviram Gabay</Item>
-                    <Item><img src="../../assets/d5.svg" />Aviram Gabay</Item>
-                </List>
-                <Line></Line>
-                <List>
-                    <Item><img src="../../assets/1.svg" />Invite a new member by email</Item>
-                </List>
-            </Panel>
-            <Panel>
-                <List>
-                    <Item hover>From computer</Item>
-                    <Item>From Google Drive</Item>
-                    <Item>From Dropbox</Item>
-                    <Item>Thanks!Like a</Item>
-                    <Item>From OneDrive</Item>
-                </List>
-            </Panel>
-            <Panel>
-                <List>
-                    <Item><img src="../../assets/1.svg" /> Send email</Item>
-                    <Item><img src="../../assets/2.svg" /> Delete</Item>
-                     <Item disabled><img src="../../assets/9.svg" /> Disabled</Item>
-                    <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
-                    <Item><img src="../../assets/8.svg" /> Info</Item>
-                </List>
-            </Panel>
-        </Left>
-        <right>
-            <Panel>
-                <Caption>
-                    <span className="caption">Caption</span>
-                    <span className="back">Back</span>
-                </Caption>
-                <Line></Line>
-                <List>
-                    <Item>
-                        <Checkbox>
-                            <Label checkbox>Send mail
-                                <input type="checkbox" checked="checked" />
-                                <span></span>
-                            </Label>
-                        </Checkbox>
-                    </Item>
-                    <Item>
-                        <Checkbox>
-                            <Label checkbox>Delete
-                                <input type="checkbox" />
-                                <span></span>
-                            </Label>
-                        </Checkbox>
-                    </Item>
-                    <Item>
-                        <Checkbox>
-                            <Label checkbox>Announcements
-                                <input type="checkbox" />
-                                <span></span>
-                            </Label>
-                        </Checkbox>
-                    </Item>
-                    <Item hover>
-                        <Checkbox>
-                            <Label checkbox selected-hover>Favorites
-                                <input type="checkbox" checked="checked" />
-                                <span></span>
-                            </Label>
-                        </Checkbox>
-                    </Item>
-                    <Item>
-                        <Checkbox>
-                            <Label checkbox>Info
-                                <input type="checkbox" />
-                                <span></span>
-                            </Label>
-                        </Checkbox>
-                    </Item>
-                    <Item>
-                        <Checkbox>
-                            <Label checkbox>Send feedback
-                                <input type="checkbox" />
-                                <span></span>
-                            </Label>
-                        </Checkbox>
-                    </Item>
-                    <Item>
-                        <Checkbox>
-                            <Label checkbox>Setting
-                                <input type="checkbox" />
-                                <span></span>
-                            </Label>
-                        </Checkbox>
-                    </Item>
-                </List>
-                <Line></Line>
-                <List>
-                    <Item center><img src="../../assets/menu-edit.svg" /> Edit</Item>
-                </List>
-            </Panel>
-            <Panel>
-                <Caption>
-                    <span className="caption">Caption</span>
-                    <span className="back">Back</span>
-                </Caption>
-                <Line></Line>
-                <Search>
-                    <input type="text" placeholder="Placeholder text here" />
-                </Search>
-                <List>
-                    <Item><img src="../../assets/1.svg" /> Send email</Item>
-                    <Item><img src="../../assets/2.svg" /> Delete</Item>
-                    <Item><img src="../../assets/3.svg" /> Shortcuts</Item>
-                </List>
-                <Line></Line>
-                <Caption>
-                    <span className="caption">Caption</span>
-                </Caption>
-                <List>
-                    <Item><img src="../../assets/4.svg" /> Announcements</Item>
-                    <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
-                    <Item><img src="../../assets/8.svg" /> Info</Item>
-                    <Item disabled><img src="../../assets/9.svg" /> When disabled</Item>
-                    <Item><img src="../../assets/10.svg" /> Send feedback</Item>
-                    <Item><img src="../../assets/11.svg" /> Setting</Item>
-                </List>
-                <Line></Line>
-                <List>
-                    <Item center><img src="../../assets/menu-edit.svg" /> Edit</Item>
-                </List>
-            </Panel>
-            <Panel>
-                <Caption>
-                    <span className="caption">Caption</span>
-                    <span className="back">+ New tag</span>
-                </Caption>
-                <Line></Line>
-                 <Button>
-                    <button className="design">Design</button>
-                    <button className="rd">R&D</button>
-                    <button className="sales">Sales</button>
-                    <button className="partners">Partners</button>
-                    <button className="it">IT</button>
-                </Button>
-                <Search>
-                    <input type="text" placeholder="Placeholder text here" />
-                </Search>
-                <List>
-                    <Item colored blue>#yo</Item>
-                    <Item colored yellow>#Cheese</Item>
-                    <Item colored red>#new</Item>
-                    <Item colored hover>#Support</Item>
-                    <Item colored green>#love us</Item>
-                </List>
-                <Line></Line>
-                <List>
-                    <Item center>Manage tags</Item>
-                </List>
-            </Panel>
-            <Panel>
-                <List>
-                    <Item><img src="../../assets/111.svg" />From computer</Item>
-                    <Item><img src="../../assets/22.svg" />From Google Drive</Item>
-                    <Item><img src="../../assets/33.svg" />From Dropbox</Item>
-                    <Item><img src="../../assets/33.svg" />Thanks!Like a</Item>
-                    <Item><img src="../../assets/44.svg" />From OneDrive</Item>
-                </List>
-            </Panel>
-        </right>
-    </OtherMenus>
+  <Menu>
+    <Panel>
+      <Caption>
+        <span className="caption">Caption</span>
+        <span className="back">Back</span>
+      </Caption>
+      <Line />
+      <Button>
+        <button className="design">Design</button>
+        <button className="rd">R&D</button>
+        <button className="sales">Sales</button>
+        <button className="partners">Partners</button>
+        <button className="it">IT</button>
+      </Button>
+      <Search><input type="text" placeholder="Placeholder text here" /></Search>
+      <List>
+        <Item><img src="../../assets/1.svg" /> Send email</Item>
+        <Item><img src="../../assets/2.svg" /> Delete</Item>
+        <Item><img src="../../assets/3.svg" /> Shortcuts</Item>
+      </List>
+      <Line />
+      <Caption><span className="caption">Caption</span></Caption>
+      <List>
+        <Item><img src="../../assets/4.svg" /> Announcements</Item>
+        <Item><img src="../../assets/5.svg" /> Dark mode</Item>
+        <Item><img src="../../assets/6.svg" /> Message</Item>
+        <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
+      </List>
+      <Line />
+      <List>
+        <Item><img src="../../assets/8.svg" /> Info</Item>
+        <Item disabled><img src="../../assets/9.svg" /> When disabled</Item>
+      </List>
+      <Line />
+      <List>
+        <Item><img src="../../assets/10.svg" /> Send feedback</Item>
+        <Item><img src="../../assets/11.svg" /> Setting</Item>
+      </List>
+      <Line />
+      <List>
+        <Item center><img src="../../assets/menu-edit.svg" /> Edit</Item>
+      </List>
+    </Panel>
+  </Menu>
+  <OtherMenus>
+    <Left>
+      <Panel>
+        <Search>
+          <input type="text" placeholder="Placeholder text here" />
+        </Search>
+        <List>
+          <Item><img src="../../assets/1.svg" /> Send email</Item>
+          <Item><img src="../../assets/2.svg" /> Delete</Item>
+          <Item><img src="../../assets/4.svg" /> Announcements</Item>
+          <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
+          <Item><img src="../../assets/8.svg" /> Info</Item>
+          <Item><img src="../../assets/10.svg" /> Send feedback</Item>
+          <Item><img src="../../assets/11.svg" /> Setting</Item>
+        </List>
+      </Panel>
+      <Panel>
+        <Caption>
+          <span className="caption">Caption</span>
+          <span className="back">Back</span>
+        </Caption>
+        <Line />
+        <Search>
+          <input type="text" placeholder="Placeholder text here" />
+        </Search>
+        <List>
+          <Item><img src="../../assets/8.svg" /> Info</Item>
+          <Item disabled><img src="../../assets/9.svg" /> When disabled</Item>
+          <Item><img src="../../assets/10.svg" /> Send feedback</Item>
+          <Item><img src="../../assets/11.svg" /> Setting</Item>
+        </List>
+        <Line />
+        <List>
+          <Item>
+            <img src="../../assets/menu-edit.svg" /> Action <img src="../../assets/down-icon.svg" />
+          </Item>
+        </List>
+      </Panel>
+      <Panel>
+        <Caption>
+          <span className="caption">Caption</span>
+          <span className="back">+ New tag</span>
+        </Caption>
+        <Line />
+        <Search>
+          <input type="text" placeholder="Placeholder text here" />
+        </Search>
+        <List>
+          <Item colored blue>#yo</Item>
+          <Item colored yellow>#Cheese</Item>
+          <Item colored red>#new</Item>
+          <Item colored hover>#Support</Item>
+          <Item colored green>#love us</Item>
+        </List>
+        <Line />
+        <List>
+          <Item center>Manage tags</Item>
+        </List>
+      </Panel>
+      <Panel>
+        <Caption>
+          <span className="caption">Caption</span>
+          <span className="back">+ New tag</span>
+        </Caption>
+        <Line />
+        <Search>
+          <input type="text" placeholder="Placeholder text here" />
+        </Search>
+        <List>
+          <Item><img src="../../assets/dp.svg" />Aviram Gabay</Item>
+        </List>
+        <Caption center><span className="caption">People</span></Caption>
+        <List>
+          <Item><img src="../../assets/d2.svg" />Aviram Gabay</Item>
+          <Item><img src="../../assets/d3.svg" />Aviram Gabay</Item>
+        </List>
+        <Caption center><span className="caption">Team</span></Caption>
+        <List>
+          <Item><img src="../../assets/d4.svg" />Aviram Gabay</Item>
+          <Item><img src="../../assets/d5.svg" />Aviram Gabay</Item>
+        </List>
+        <Line />
+        <List>
+          <Item>
+            <img src="../../assets/1.svg" />Invite a new member by email
+          </Item>
+        </List>
+      </Panel>
+      <Panel>
+        <List>
+          <Item hover>From computer</Item>
+          <Item>From Google Drive</Item>
+          <Item>From Dropbox</Item>
+          <Item>Thanks!Like a</Item>
+          <Item>From OneDrive</Item>
+        </List>
+      </Panel>
+      <Panel>
+        <List>
+          <Item><img src="../../assets/1.svg" /> Send email</Item>
+          <Item><img src="../../assets/2.svg" /> Delete</Item>
+          <Item disabled><img src="../../assets/9.svg" /> Disabled</Item>
+          <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
+          <Item><img src="../../assets/8.svg" /> Info</Item>
+        </List>
+      </Panel>
+    </Left>
+    <right>
+      <Panel>
+        <Caption>
+          <span className="caption">Caption</span>
+          <span className="back">Back</span>
+        </Caption>
+        <Line />
+        <List>
+          <Item>
+            <Checkbox>
+              <Label checkbox>
+                Send mail
+                <input type="checkbox" checked="checked" />
+                <span />
+              </Label>
+            </Checkbox>
+          </Item>
+          <Item>
+            <Checkbox>
+              <Label checkbox>
+                Delete
+                <input type="checkbox" />
+                <span />
+              </Label>
+            </Checkbox>
+          </Item>
+          <Item>
+            <Checkbox>
+              <Label checkbox>
+                Announcements
+                <input type="checkbox" />
+                <span />
+              </Label>
+            </Checkbox>
+          </Item>
+          <Item hover>
+            <Checkbox>
+              <Label checkbox selected-hover>
+                Favorites
+                <input type="checkbox" checked="checked" />
+                <span />
+              </Label>
+            </Checkbox>
+          </Item>
+          <Item>
+            <Checkbox>
+              <Label checkbox>
+                Info
+                <input type="checkbox" />
+                <span />
+              </Label>
+            </Checkbox>
+          </Item>
+          <Item>
+            <Checkbox>
+              <Label checkbox>
+                Send feedback
+                <input type="checkbox" />
+                <span />
+              </Label>
+            </Checkbox>
+          </Item>
+          <Item>
+            <Checkbox>
+              <Label checkbox>
+                Setting
+                <input type="checkbox" />
+                <span />
+              </Label>
+            </Checkbox>
+          </Item>
+        </List>
+        <Line />
+        <List>
+          <Item center><img src="../../assets/menu-edit.svg" /> Edit</Item>
+        </List>
+      </Panel>
+      <Panel>
+        <Caption>
+          <span className="caption">Caption</span>
+          <span className="back">Back</span>
+        </Caption>
+        <Line />
+        <Search>
+          <input type="text" placeholder="Placeholder text here" />
+        </Search>
+        <List>
+          <Item><img src="../../assets/1.svg" /> Send email</Item>
+          <Item><img src="../../assets/2.svg" /> Delete</Item>
+          <Item><img src="../../assets/3.svg" /> Shortcuts</Item>
+        </List>
+        <Line />
+        <Caption><span className="caption">Caption</span></Caption>
+        <List>
+          <Item><img src="../../assets/4.svg" /> Announcements</Item>
+          <Item hover><img src="../../assets/7.svg" /> Favorites</Item>
+          <Item><img src="../../assets/8.svg" /> Info</Item>
+          <Item disabled><img src="../../assets/9.svg" /> When disabled</Item>
+          <Item><img src="../../assets/10.svg" /> Send feedback</Item>
+          <Item><img src="../../assets/11.svg" /> Setting</Item>
+        </List>
+        <Line />
+        <List>
+          <Item center><img src="../../assets/menu-edit.svg" /> Edit</Item>
+        </List>
+      </Panel>
+      <Panel>
+        <Caption>
+          <span className="caption">Caption</span>
+          <span className="back">+ New tag</span>
+        </Caption>
+        <Line />
+        <Button>
+          <button className="design">Design</button>
+          <button className="rd">R&D</button>
+          <button className="sales">Sales</button>
+          <button className="partners">Partners</button>
+          <button className="it">IT</button>
+        </Button>
+        <Search>
+          <input type="text" placeholder="Placeholder text here" />
+        </Search>
+        <List>
+          <Item colored blue>#yo</Item>
+          <Item colored yellow>#Cheese</Item>
+          <Item colored red>#new</Item>
+          <Item colored hover>#Support</Item>
+          <Item colored green>#love us</Item>
+        </List>
+        <Line />
+        <List>
+          <Item center>Manage tags</Item>
+        </List>
+      </Panel>
+      <Panel>
+        <List>
+          <Item><img src="../../assets/111.svg" />From computer</Item>
+          <Item><img src="../../assets/22.svg" />From Google Drive</Item>
+          <Item><img src="../../assets/33.svg" />From Dropbox</Item>
+          <Item><img src="../../assets/33.svg" />Thanks!Like a</Item>
+          <Item><img src="../../assets/44.svg" />From OneDrive</Item>
+        </List>
+      </Panel>
+    </right>
+  </OtherMenus>
 </Main>
