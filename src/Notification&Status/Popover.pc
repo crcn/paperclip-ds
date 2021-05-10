@@ -1,0 +1,104 @@
+<div export component as="AlertBanner">
+    <style>
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        max-width: 770px;
+    </style>
+    {children}
+</div>
+<div export component as="Label" className:left="left" className:top="top" className:top="top" className:bottom="bottom" className:right="right">
+    <style>
+        margin: 42px 30px;
+        background: #0085FF;
+        border-radius: 8px;
+        padding: 15px 16px;
+        display: inline-block;
+        width: 274px;
+        position: relative;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.17);
+        
+        h3{
+            color: #fff;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        p{
+            color: #fff;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        button{
+            background: #FFFFFF;
+            border-radius: 4px;
+            border: none;
+            float: right;
+            display: ;
+            padding: 4px 10px;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #0085FF;
+        }
+        &.top:after{
+            top: 0;
+            left: 50%;
+            transform: rotate(45deg) translate(-50%, -4px);
+        }
+        &.bottom:after{
+            left: 50%;
+            bottom: 0;
+            transform: rotate(45deg) translate(50%, 4px);
+        }
+        &.left:after{
+            top: 50%;
+            left: 0;
+            transform: rotate(45deg) translate(-50%, 4px);
+        }
+        &.right:after{
+            top: 50%;
+            right: 0;
+            transform: rotate(45deg) translate(50%, -4px);
+        }
+        
+    </style>
+    {children}
+</div>
+
+<div export component as="Panel">
+    <style>
+        /* width: 100%; */
+    </style>
+    {children}
+</div>
+
+
+<AlertBanner>
+    <Panel>
+        <Label left>
+            <h3>This is a title</h3>
+            <p>Popover message will appear here loremipsum dolor samet… </p>
+            <button>Button</button>
+        </Label>
+        <Label top>
+            <h3>This is a title</h3>
+            <p>Popover message will appear here loremipsum dolor samet… </p>
+            <button>Button</button>
+        </Label>
+    </Panel>
+    <Panel>
+        <Label bottom>
+            <h3>This is a title</h3>
+            <p>Popover message will appear here loremipsum dolor samet… </p>
+            <button>Button</button>
+        </Label>
+        <Label right>
+            <h3>This is a title</h3>
+            <p>Popover message will appear here loremipsum dolor samet… </p>
+            <button>Button</button>
+        </Label>
+    </Panel>
+</AlertBanner>

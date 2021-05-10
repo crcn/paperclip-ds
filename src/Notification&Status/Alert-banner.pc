@@ -1,0 +1,51 @@
+<div export component as="AlertBanner">
+    <style>
+        padding: 20px;
+    </style>
+    {children}
+</div>
+<div export component as="Label" className:black="black" className:negative="negative" className:positive="positive" className:primary="primary">
+    <style>
+        margin: 12px 0;
+        background-color: #ccc;
+        background-image: url('../../assets/cross-white.svg');
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        display: table;
+        padding: 9px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        line-height: 22px;
+        &.black{
+            background-color: #323338;
+        }
+        &.negative{
+            background-color: #E44258;
+        }
+        &.positive{
+            background-color: #00CA72;
+        }
+        &.primary{
+            background-color: #0085FF;
+        }
+    </style>
+    {children}
+</div>
+
+<AlertBanner>
+    <Label black>
+        Alert banner message <u>this is a CTA</u>
+    </Label>
+    <Label negative>
+        Alert banner message <u>this is a CTA</u>
+    </Label>
+    <Label positive>
+        Alert banner message <u>this is a CTA</u>
+    </Label>
+    <Label primary>
+        Alert banner message <u>this is a CTA</u>
+    </Label>
+</AlertBanner>

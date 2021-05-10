@@ -1,0 +1,132 @@
+
+<!--
+  @frame { width: 1024, height: 1219, x: 0, y: 0 }
+-->
+<div export component as="Popup">
+    <style>
+        padding: 30px;
+    </style>
+    {children}
+</div>
+
+
+<!--
+  @frame { visible: false }
+-->
+<div export component as="Panel" className:text-center="text-center">
+    <style>
+        background: #FFFFFF;
+        padding: 30px 54px;
+        box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        max-width: 558px;
+        box-sizing: border-box;
+        margin-bottom: 70px;
+        position: relative;
+        h1{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 37px;
+        }
+        p{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .cross{
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 18px;
+            img{
+                width: 20px;
+            }
+        }
+        .btn{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            background: #0085FF;
+            padding: 8px 16px;
+            color: #fff;
+            border: none;
+            &.bgless{
+                background: none;
+                color: #323338;
+            }
+        }
+        .text-right{
+            text-align: right;
+            margin-top: 25px;
+        }
+        &.text-center{
+            text-align: center;
+            .text-right{
+                text-align: center;
+                button{
+                    display: table;
+                    margin: 0 auto;
+                }
+            }
+        }
+    </style>
+    {children}
+</div>
+
+<!--
+  @frame { title: "Buttons", width: 1024, height: 1835, x: 0, y: 0 }
+-->
+<Popup>
+    <Panel>
+        <span className="cross">
+            <img src="../../assets/cross.svg" />
+        </span>
+        <h1>Popup title </h1>
+        <p>This is a placeholer text just to show the default size and weight for body text typography in a popup.</p>
+        <div className="text-right">
+            <button className="btn bgless">Button</button>
+            <button className="btn">Button</button>
+        </div>
+    </Panel>
+    <Panel text-center>
+        <span className="cross">
+            <img src="../../assets/cross.svg" />
+        </span>
+        <h1>Popup title </h1>
+        <p>This is a placeholer text just to show the default size and weight for body text typography in a popup.</p>
+        <div className="text-right">
+            <button className="btn bgless">Button</button>
+            <button className="btn">Button</button>
+        </div>
+    </Panel>
+    <Panel text-center>
+        <span className="cross">
+            <img src="../../assets/cross.svg" />
+        </span>
+        <img src="../../assets/popup-img.svg" />
+        <h1>Popup title </h1>
+        <p>This is a placeholer text just to show the default size and weight for body text typography in a popup.</p>
+        <div className="text-right">
+            <button className="btn bgless">Button</button>
+            <button className="btn">Button</button>
+        </div>
+    </Panel>
+    <Panel text-center>
+        <span className="cross">
+            <img src="../../assets/cross.svg" />
+        </span>
+        <h1>Popup title </h1>
+        <p>This is a placeholer text just to show the default size and weight for body text typography in a popup.</p>
+        <img src="../../assets/popup-img.svg" />
+        <div className="text-right">
+            <button className="btn bgless">Button</button>
+            <button className="btn">Button</button>
+        </div>
+    </Panel>
+</Popup>

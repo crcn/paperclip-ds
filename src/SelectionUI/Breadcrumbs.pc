@@ -1,0 +1,112 @@
+<div export component as="Breadcrumbs">
+    <style>
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        grid-column-gap: 34px;
+        span{
+            position: relative;
+            padding: 3px 30px 7px 7px;
+            display: inline-block;
+            border-radius: 5px;
+            margin-top: 15px;
+            img{
+                position: relative;
+                top: 5px;
+                width: 25px;
+                margin-right: 7px;
+            }
+            &:after{
+                position: absolute;
+                right: 7px;
+                top: 50%;
+                transform: translate(0, -50%) rotate(45deg);
+                content: "";
+                width: 9px;
+                height: 9px;
+                border-right: solid 1px #676879;
+                border-top: solid 1px #676879;
+            }
+            &:last-child{
+                padding-right: 15px;
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    </style>
+    {children}
+</div>
+
+<div export component as="Panel" className:regular="regular" className:hover="hover" className:disabled="disabled" className:current="current">
+    <style>
+        display: block;
+        margin-bottom: 10px;
+        
+        &.regular{
+            color: #676879;
+        }
+        &.hover{
+            span{
+                color: #676879;
+                background: #E6E9EF;
+            }
+        }
+        &.disabled{
+            opacity: 0.4;
+        }
+        &.current{
+            color: #323338;
+            font-weight: 600;
+        }
+    </style>
+    {children}
+</div>
+
+<Breadcrumbs>
+    <Panel>
+        <Panel regular>
+            <span><img src="../../assets/union.svg" />Workspace</span>
+            <span><img src="../../assets/folder.svg" />Folder</span>
+            <span><img src="../../assets/board.svg" />Board</span>
+            <span><img src="../../assets/group.svg" />Group</span>
+        </Panel>
+        <Panel hover>
+            <span><img src="../../assets/union.svg" />Workspace</span>
+            <span><img src="../../assets/folder.svg" />Folder</span>
+            <span><img src="../../assets/board.svg" />Board</span>
+            <span><img src="../../assets/group.svg" />Group</span>
+        </Panel>
+        <Panel disabled>
+            <span><img src="../../assets/union.svg" />Workspace</span>
+            <span><img src="../../assets/folder.svg" />Folder</span>
+            <span><img src="../../assets/board.svg" />Board</span>
+            <span><img src="../../assets/group.svg" />Group</span>
+        </Panel>
+        <Panel current>
+            <span><img src="../../assets/union.svg" />Workspace</span>
+            <span><img src="../../assets/folder.svg" />Folder</span>
+            <span><img src="../../assets/board.svg" />Board</span>
+            <span><img src="../../assets/group.svg" />Group</span>
+        </Panel>
+    </Panel>
+    <Panel>
+        <Panel regular>
+            <span><img src="../../assets/union.svg" />Workspace</span>
+            <span><img src="../../assets/folder.svg" />Folder</span>
+            <span><img src="../../assets/board.svg" />Board</span>
+            <span><img src="../../assets/group.svg" />Group</span>
+        </Panel>
+         <Panel>
+            <span>Workspace</span>
+            <span>Folder</span>
+            <span>Board</span>
+            <span>Group</span>
+        </Panel>
+    </Panel>
+</Breadcrumbs>
+

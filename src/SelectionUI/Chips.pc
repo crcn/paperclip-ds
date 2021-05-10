@@ -1,0 +1,89 @@
+
+<!--
+  @frame { title: "", width: 1285, height: 768, x: 30, y: 455 }
+-->
+<div export component as="Breadcrumbs">
+    <style>
+        display: flex;
+        flex-direction: row;
+        grid-column-gap: 34px;
+    </style>
+    {children}
+</div>
+
+
+<!--
+  @frame { width: 1024, height: 768, x: 33, y: 464 }
+-->
+<div export component as="Panel" className:single="single" className:regular="regular" className:positive="positive" className:negative="negative" className:neutral="neutral" className:cross_icon="cross_icon">
+    <style>
+        margin: 10px 5px;
+        &.single{
+            display: inline-table;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #323338  ;
+            &.regular{
+                background: #DFF0FF;
+            }
+            &.positive{
+                background: #CCF4E3;
+            }
+            &.negative{
+                background: #F9DADE;
+            }
+            &.neutral{
+                background: #E6E9EF;
+            }
+            img{
+                width: 15px;
+                position: relative;
+                top: 2px;
+                margin-right: 3px;
+                &.cross_icon{
+                    position: relative;
+                    top: 3px;
+                }
+            }
+        }
+    </style>
+    {children}
+</div>
+
+
+<!--
+  @frame { width: 1024, height: 768, x: 33, y: 463 }
+-->
+<Breadcrumbs>
+    <Panel>
+        <Panel single regular>
+           This is a chip
+        </Panel>
+        <Panel single positive>
+           This is a chip
+        </Panel>
+        <Panel single negative>
+           This is a chip
+        </Panel>
+        <Panel single neutral>
+           This is a chip
+        </Panel>
+    </Panel>
+
+    <Panel>
+        <Panel single regular>
+           <img src="../../assets/profile.svg" /> This is a chip <img className="cross_icon" src="../../assets/cross.svg" />
+        </Panel>
+        <Panel single positive>
+           <img src="../../assets/profile.svg" /> This is a chip <img className="cross_icon" src="../../assets/cross.svg" />
+        </Panel>
+        <Panel single negative>
+           <img src="../../assets/profile.svg" /> This is a chip <img className="cross_icon" src="../../assets/cross.svg" />
+        </Panel>
+        <Panel single neutral>
+           <img src="../../assets/profile.svg" /> This is a chip <img className="cross_icon" src="../../assets/cross.svg" />
+        </Panel>
+    </Panel>
+</Breadcrumbs>
+

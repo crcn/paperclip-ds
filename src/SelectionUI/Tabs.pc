@@ -1,0 +1,49 @@
+<div export component as="panel">
+    <style>
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        margin: 5px;
+        color: #676879;
+        border-bottom: solid 1px #C5C7D0;
+        display: inline-block;
+        margin: 15px;
+    </style>
+    {children}
+</div>
+
+<button export component as="Button" className:bg="bg" className:bb="bb">
+    <style>
+        border: none;
+        background: none;
+        padding: 5px 15px;
+        color: #323338;
+        &.bg{
+            background: #E6E9EF;
+            border-radius: 4px;
+        }
+        &.bb{
+            border-bottom: solid 2px #0085FF;
+            color: #323338;
+        }
+    </style>
+    {children}
+</button>
+<div>
+    <panel>
+        <ButtonGroup>
+            <Button>Tab</Button>
+            <Button bg>Tab</Button>
+            <Button bb>Tab</Button>
+            <Button>Tab</Button>
+        </ButtonGroup>
+    </panel>
+    <panel>
+        <ButtonGroup>
+            <Button bb>Tab</Button>
+            <Button>Tab</Button>
+            <Button>Tab</Button>
+        </ButtonGroup>
+    </panel>
+</div>

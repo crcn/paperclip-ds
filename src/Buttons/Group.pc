@@ -5,7 +5,7 @@
     {children}
 </div>
 
-<button export component as="Button">
+<button export component as="Button" className:bgless="bgless" className:border-left="border-left" className:border-right="border-right" className:active="active" className:large="large" className:medium="medium" className:small="small" className:borderless="borderless">
     <style>
         border-radius: 4px;
         font-family: 'Roboto';
@@ -13,26 +13,168 @@
         font-weight: normal;
         line-height: 24px;
         border: 1px solid #C5C7D0;
-        margin: 10px auto;
+        margin: 5px;
         background: #E6E9EF;
         color: #676879;
+        &.large{
+            padding: 11px 21px;
+        }
+        &.medium{
+            padding: 7px 21px;
+        }
+        &.small{
+            padding: 3px 21px;
+        }
+        &.bgless{
+            background: transparent;
+        }
+        &.border-left{
+            border-radius: 4px 0 0 4px;
+        }
+        &.border-right{
+            border-radius: 0 4px 4px 0;
+        }
+        &.active{
+            border: 1px solid #0085FF;
+            background: #DFF0FF;
+            color: #0085FF;
+        }
+        &.borderless{
+            border: none;
+        }
     </style>
     {children}
 </button>
+<div export component as="panel" className:divided="divided">
+    <style>
+        margin: 17px 0;
+        display: block;
+        &.divided{
+            margin-top: 76px;
+        }
+    </style>
+    {children}
+</div>
 
+
+<!--
+  @frame { title: "", width: 1024, height: 1084, x: 0, y: 0 }
+-->
 <div>
+    <panel>
+        <ButtonGroup>
+            <Button large bgless border-left>Button</Button>
+            <Button large bgless>Button</Button>
+            <Button large bgless border-right>Button</Button>
+        </ButtonGroup>
 
-    <ButtonGroup>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-    </ButtonGroup>
+        <ButtonGroup>
+            <Button large border-left>Button</Button>
+            <Button large>Button</Button>
+            <Button large border-right>Button</Button>
+        </ButtonGroup>
+        
+        <ButtonGroup>
+            <Button large active border-left>Button</Button>
+            <Button large active>Button</Button>
+            <Button large active border-right>Button</Button>
+        </ButtonGroup>
+    </panel>
+    <panel>
+        <ButtonGroup>
+            <Button medium bgless border-left>Button</Button>
+            <Button medium bgless>Button</Button>
+            <Button medium bgless border-right>Button</Button>
+        </ButtonGroup>
+
+        <ButtonGroup>
+            <Button medium border-left>Button</Button>
+            <Button medium>Button</Button>
+            <Button medium border-right>Button</Button>
+        </ButtonGroup>
+        
+        <ButtonGroup>
+            <Button medium active border-left>Button</Button>
+            <Button medium active>Button</Button>
+            <Button medium active border-right>Button</Button>
+        </ButtonGroup>
+    </panel>
+    <panel>
+        <ButtonGroup>
+            <Button small bgless border-left>Button</Button>
+            <Button small bgless>Button</Button>
+            <Button small bgless border-right>Button</Button>
+        </ButtonGroup>
+
+        <ButtonGroup>
+            <Button small border-left>Button</Button>
+            <Button small>Button</Button>
+            <Button small border-right>Button</Button>
+        </ButtonGroup>
+        
+        <ButtonGroup>
+            <Button small active border-left>Button</Button>
+            <Button small active>Button</Button>
+            <Button small active border-right>Button</Button>
+        </ButtonGroup>
+    </panel>
 
 
-    <ButtonGroup>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-    </ButtonGroup>
+    <panel divided>
+        <ButtonGroup>
+            <Button large borderless bgless border-left>Button</Button>
+            <Button large borderless bgless>Button</Button>
+            <Button large borderless bgless border-right>Button</Button>
+        </ButtonGroup>
 
+        <ButtonGroup>
+            <Button large borderless border-left>Button</Button>
+            <Button large borderless>Button</Button>
+            <Button large borderless border-right>Button</Button>
+        </ButtonGroup>
+        
+        <ButtonGroup>
+            <Button large borderless active border-left>Button</Button>
+            <Button large borderless active>Button</Button>
+            <Button large borderless active border-right>Button</Button>
+        </ButtonGroup>
+    </panel>
+    <panel>
+        <ButtonGroup>
+            <Button medium borderless bgless border-left>Button</Button>
+            <Button medium borderless bgless>Button</Button>
+            <Button medium borderless bgless border-right>Button</Button>
+        </ButtonGroup>
+
+        <ButtonGroup>
+            <Button medium borderless border-left>Button</Button>
+            <Button medium borderless>Button</Button>
+            <Button medium borderless border-right>Button</Button>
+        </ButtonGroup>
+        
+        <ButtonGroup>
+            <Button medium borderless active border-left>Button</Button>
+            <Button medium borderless active>Button</Button>
+            <Button medium borderless active border-right>Button</Button>
+        </ButtonGroup>
+    </panel>
+    <panel>
+        <ButtonGroup>
+            <Button small bgless border-left>Button</Button>
+            <Button small bgless>Button</Button>
+            <Button small bgless border-right>Button</Button>
+        </ButtonGroup>
+
+        <ButtonGroup>
+            <Button small border-left>Button</Button>
+            <Button small>Button</Button>
+            <Button small border-right>Button</Button>
+        </ButtonGroup>
+        
+        <ButtonGroup>
+            <Button small active border-left>Button</Button>
+            <Button small active>Button</Button>
+            <Button small active border-right>Button</Button>
+        </ButtonGroup>
+    </panel>
 </div>

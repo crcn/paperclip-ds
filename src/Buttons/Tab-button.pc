@@ -1,0 +1,71 @@
+
+<!--
+  @frame { visible: false }
+-->
+<div export component as="ButtonGroup">
+    <style>
+
+    </style>
+    {children}
+</div>
+
+
+<button export component as="Button" className:left-radius="left-radius" className:right-radius="right-radius" className:selected="selected" className:bgless="bgless">
+    <style>
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        border: 1px solid #C5C7D0;
+        background: #E6E9EF;
+        color: #676879;
+        padding: 7px 19px;
+        &.left-radius{
+            border-radius: 4px 0 0 4px;
+        }
+        &.right-radius{
+            border-radius: 0 4px 4px 0;
+        }
+        &.selected{
+            color: #0085FF;
+            background: #DFF0FF !important;
+            border: 1px solid #0085FF;
+        }
+        &.bgless{
+            background: none;
+            border-color: transparent;
+        }
+    </style>
+    {children}
+</button>
+
+<div export component as="panel">
+    <style>
+        margin: 33px;
+        display: block;
+        &.divided{
+        }
+    </style>
+    {children}
+</div>
+
+
+<div>
+    <panel>
+        <ButtonGroup>
+            <Button left-radius selected>Alpha</Button>
+            <Button>Beta</Button>
+            <Button>Gamma</Button>
+            <Button right-radius>Delta</Button>
+        </ButtonGroup>
+    </panel>
+
+    <panel>
+        <ButtonGroup>
+            <Button bgless left-radius selected>Alpha</Button>
+            <Button bgless>Beta</Button>
+            <Button bgless>Gamma</Button>
+            <Button bgless right-radius>Delta</Button>
+        </ButtonGroup>
+    </panel>
+</div>

@@ -1,0 +1,77 @@
+<div export component as="Attention">
+    <style>
+        padding: 30px;
+        max-width: 250px;
+    </style>
+    {children}
+</div>
+<div export component as="Label" className:primary="primary" className:positive="positive" className:negative="negative" className:dark="dark" className:small="small">
+    <style>
+        margin: 20px 0;
+        background: #E6E9EF;
+        span{
+            background: red;
+            width: 25%;
+            border-radius: 4px;
+            padding: 4px 16px;
+            display: block;
+            &.primary{
+                background: #0085FF;
+            }
+            &.dark{
+                background: #323338;
+            }
+            &.positive{
+                background: #00CA72;
+            }
+            &.negative{
+                background: #E44258;
+            }
+            &.small{
+                padding: 2px 16px;
+            }
+        }
+    </style>
+    {children}
+</div>
+
+<div export component as="Panel">
+    <style>
+        width: 100%;
+        display: inline-block;
+        margin: 25px 0;
+    </style>
+    {children}
+</div>
+
+
+<Attention>
+    <Panel>
+        <Label>
+            <span class="primary"></span>
+        </Label>
+        <Label>
+            <span class="dark"></span>
+        </Label>
+        <Label>
+            <span class="negative"></span>
+        </Label>
+        <Label>
+            <span class="positive"></span>
+        </Label>
+    </Panel>
+    <Panel>
+        <Label>
+            <span class="primary small"></span>
+        </Label>
+        <Label>
+            <span class="dark small"></span>
+        </Label>
+        <Label>
+            <span class="negative small"></span>
+        </Label>
+        <Label>
+            <span class="positive small"></span>
+        </Label>
+    </Panel>
+</Attention>
