@@ -1,121 +1,158 @@
 <div export component as="Search">
-    <style>
-        display: flex;
-        flex-direction: row;
-        grid-column-gap: 42px;
-        padding: 20px;
-    </style>
-    {children}
+  <style>
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 42px;
+    padding: 20px;
+  </style>
+  {children}
 </div>
-<div export component as="Label" className:form-control="form-control" className:hover="hover" className:form-control="form-control" className:focus="focus" className:negative="negative" className:positive="positive" className:cross-icon="cross-icon" className:search-icon="search-icon">
-    <style>
-        margin: 13px 0;
-        .large{
-
-        }
-        .form-control{
-            padding: 11px 10px;
-            width: 100%;
-            border: 1px solid #C5C7D0;
-            box-sizing: border-box;
-            border-radius: 4px;
-            background-repeat: no-repeat;
-            background-position: right 15px center;
-            &.hover{
-                border: 1px solid #323338;
-            }
-            &.focus{
-                border: 1px solid #0085FF;
-            }
-            &.negative{
-                border: 1px solid #E44258;
-            }
-            &.positive{
-                border: 1px solid #00CA72;
-            }
-            &.disabled{
-                border-color: transparent;
-                background-color: #E6E9EF;
-            }
-            &.large{
-                padding: 15px 10px;
-            }
-            &.small{
-                padding: 7px 10px;
-            }
-            &.search-icon{
-                background-image: url('../../assets/search-icon.svg');
-            }
-            &.cross-icon{
-                background-image: url('../../assets/cross-icon.svg');
-            }
-        }
-        small{
-            color: #E44258;
-        }
-    </style>
-    {children}
+<div export
+  component
+  as="Label"
+  className:form-control="form-control"
+  className:hover="hover"
+  className:form-control="form-control"
+  className:focus="focus"
+  className:negative="negative"
+  className:positive="positive"
+  className:cross-icon="cross-icon"
+  className:search-icon="search-icon">
+  <style>
+    margin: 13px 0;
+    .large {}
+    .form-control {
+      padding: 11px 10px;
+      width: 100%;
+      border: 1px solid #C5C7D0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      &.hover {
+        border: 1px solid #323338;
+      }
+      &.focus {
+        border: 1px solid #0085FF;
+      }
+      &.negative {
+        border: 1px solid #E44258;
+      }
+      &.positive {
+        border: 1px solid #00CA72;
+      }
+      &.disabled {
+        border-color: transparent;
+        background-color: #E6E9EF;
+      }
+      &.large {
+        padding: 15px 10px;
+      }
+      &.small {
+        padding: 7px 10px;
+      }
+      &.search-icon {
+        background-image: url('../../assets/search-icon.svg');
+      }
+      &.cross-icon {
+        background-image: url('../../assets/cross-icon.svg');
+      }
+    }
+    small {
+      color: #E44258;
+    }
+  </style>
+  {children}
 </div>
 
 
 <div export component as="Panel">
-    <style>
-        width: 100%;
-    </style>
-    {children}
+  <style>
+    width: 100%;
+  </style>
+  {children}
 </div>
 
 <Search>
-    <Panel>
-        <Label>
-            <input className="form-control search-icon large" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control search-icon large hover" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control cross-icon large" type="text" placeholder="Has text" /> 
-        </Label>
-        <Label>
-            <input className="form-control cross-icon large focus" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control search-icon large disabled" type="text" placeholder="Placeholder text here" />
-        </Label>    
-    </Panel>
-    <Panel>
-        <Label>
-            <input className="form-control search-icon" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control search-icon hover" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control cross-icon" type="text" placeholder="Has text" /> 
-        </Label>
-        <Label>
-            <input className="form-control cross-icon focus" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control search-icon disabled" type="text" placeholder="Placeholder text here" />
-        </Label>    
-    </Panel>
-    <Panel>
-        <Label>
-            <input className="form-control search-icon small" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control search-icon small hover" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control cross-icon small" type="text" placeholder="Has text" /> 
-        </Label>
-        <Label>
-            <input className="form-control cross-icon small focus" type="text" placeholder="Placeholder text here" />
-        </Label>
-        <Label>
-            <input className="form-control search-icon small disabled" type="text" placeholder="Placeholder text here" />
-        </Label>    
-    </Panel>
-     
+  <Panel>
+    <Label>
+      <input className="form-control search-icon large"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control search-icon large hover"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control cross-icon large"
+        type="text"
+        placeholder="Has text" />
+    </Label>
+    <Label>
+      <input className="form-control cross-icon large focus"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control search-icon large disabled"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+  </Panel>
+  <Panel>
+    <Label>
+      <input className="form-control search-icon"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control search-icon hover"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control cross-icon"
+        type="text"
+        placeholder="Has text" />
+    </Label>
+    <Label>
+      <input className="form-control cross-icon focus"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control search-icon disabled"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+  </Panel>
+  <Panel>
+    <Label>
+      <input className="form-control search-icon small"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control search-icon small hover"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control cross-icon small"
+        type="text"
+        placeholder="Has text" />
+    </Label>
+    <Label>
+      <input className="form-control cross-icon small focus"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+    <Label>
+      <input className="form-control search-icon small disabled"
+        type="text"
+        placeholder="Placeholder text here" />
+    </Label>
+  </Panel>
 </Search>

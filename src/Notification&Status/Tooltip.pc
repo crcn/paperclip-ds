@@ -1,74 +1,71 @@
 <div export component as="Tooltip">
-    <style>
-        padding: 20px;
-        display: flex;
-        flex-direction: row;
-        max-width: 770px;
-    </style>
-    {children}
+  <style>
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    max-width: 770px;
+  </style>
+  {children}
 </div>
-<div export component as="Label" className:left="left" className:top="top" className:top="top" className:bottom="bottom" className:right="right">
-    <style>
-        margin: 42px 9px;
-        background: #323338;
-        color: #fff;
-        border-radius: 8px;
-        padding: 10px 16px;
-        display: inline-block;
-        position: relative;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.17);
-        &:after{
-            content: "";
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background: #323338;
-        }
-        &.top:after{
-            top: 0;
-            left: 50%;
-            transform: rotate(45deg) translate(-9px, 0px);
-        }
-        &.bottom:after{
-            left: 50%;
-            bottom: 0;
-            transform: rotate(45deg) translate(0, 9px);
-        }
-        &.left:after{
-            top: 50%;
-            left: 0;
-            transform: rotate(45deg) translate(-9px, 0px);
-        }
-        &.right:after{
-            top: 50%;
-            right: 0;
-            transform: rotate(45deg) translate(0, -9px);
-        }
-        
-    </style>
-    {children}
+<div export
+  component
+  as="Label"
+  className:left="left"
+  className:top="top"
+  className:top="top"
+  className:bottom="bottom"
+  className:right="right">
+  <style>
+    margin: 42px 9px;
+    background: #323338;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 16px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.17);
+    &:after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #323338;
+    }
+    &.top:after {
+      top: 0;
+      left: 50%;
+      transform: rotate(45deg) translate(-9px, 0px);
+    }
+    &.bottom:after {
+      left: 50%;
+      bottom: 0;
+      transform: rotate(45deg) translate(0, 9px);
+    }
+    &.left:after {
+      top: 50%;
+      left: 0;
+      transform: rotate(45deg) translate(-9px, 0px);
+    }
+    &.right:after {
+      top: 50%;
+      right: 0;
+      transform: rotate(45deg) translate(0, -9px);
+    }
+
+  </style>
+  {children}
 </div>
 
-<div export component as="Panel">
-    {children}
-</div>
+<div export component as="Panel">{children}</div>
 
 
 <Tooltip>
-    <Panel>
-        <Label left>
-            Text
-        </Label>
-        <Label top>
-            Text
-        </Label>
-    </Panel>
-    <Panel>
-        <Label bottom>
-            Text
-        </Label>
-        <Label right>
-            Text
-        </Label>
-    </Panel>
+  <Panel>
+    <Label left>Text</Label>
+    <Label top>Text</Label>
+  </Panel>
+  <Panel>
+    <Label bottom>Text</Label>
+    <Label right>Text</Label>
+  </Panel>
 </Tooltip>

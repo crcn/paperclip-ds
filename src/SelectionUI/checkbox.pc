@@ -1,121 +1,132 @@
 <div export component as="Checkbox">
-    <style>
-        .checkbox {
-            width: 100%;
-            display: inline-block;
-            position: relative;
-            padding-left: 25px;
-            margin: 12px;
-            color: #323338
-;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-                &:checked ~ span {
-                    background: #0085FF;
-                    border-color: transparent;
-                    &:after {
-                        display: block;
-                    }
-                }
-                &:hover ~ span {
-                    border-color: transparent;
-                    background: #0071D9;
-                }
-            }
-            &:hover {
-                input ~ span {
-                    border: 1px solid #323338;
-                }
-            }
-            &.hover{
-                input ~ span {
-                    border: 1px solid #323338;
-                }
-            }
-            &.selected-hover input:checked ~ span{
-                background: #0071D9;
-            }
-            &.disabled span{
-                background: #E6E9EF;
-                border-color: transparent;
-            }
-            &.disabled {
-                span{
-                    background: #E6E9EF;
-                    border-color: transparent;
-                }
-                input:checked ~ span {
-                    background: #E6E9EF;
-                    border-color: transparent;
-                    &:after{
-                        border-color: #676879;
-                    }
-                }
-            }
+  <style>
+    .checkbox {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      padding-left: 25px;
+      margin: 12px;
+      color: #323338;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ span {
+          background: #0085FF;
+          border-color: transparent;
+          &:after {
+            display: block;
+          }
         }
+        &:hover ~ span {
+          border-color: transparent;
+          background: #0071D9;
+        }
+      }
+      &:hover {
+        input ~ span {
+          border: 1px solid #323338;
+        }
+      }
+      &.hover {
+        input ~ span {
+          border: 1px solid #323338;
+        }
+      }
+      &.selected-hover input:checked ~ span {
+        background: #0071D9;
+      }
+      &.disabled span {
+        background: #E6E9EF;
+        border-color: transparent;
+      }
+      &.disabled {
         span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 14px;
-            width: 14px;
-            border: 1px solid #C5C7D0;
-            &:after {
-                content: "";
-                position: absolute;
-                left: 4px;
-                top: 2px;
-                width: 4px;
-                height: 7px;
-                border: solid white;
-                border-width: 0 2px 2px 0;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-                display: none;
-            }
+          background: #E6E9EF;
+          border-color: transparent;
         }
+        input:checked ~ span {
+          background: #E6E9EF;
+          border-color: transparent;
+          &:after {
+            border-color: #676879;
+          }
+        }
+      }
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 14px;
+      width: 14px;
+      border: 1px solid #C5C7D0;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 2px;
+        width: 4px;
+        height: 7px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        display: none;
+      }
+    }
 
-    </style>
-    {children}
+  </style>
+  {children}
 </div>
-<label export component as="Label" className:checkbox="checkbox" className:hover="hover" className:selected-hover="selected-hover" className:disabled="disabled">
-    {children}
+<label export
+  component
+  as="Label"
+  className:checkbox="checkbox"
+  className:hover="hover"
+  className:selected-hover="selected-hover"
+  className:disabled="disabled">
+  {children}
 </label>
 <!-- Preview -->
 
 <Checkbox>
-    <Label checkbox>Regular
-        <input type="checkbox" />
-        <span></span>
-    </Label>
-    <Label checkbox hover>Hover
-        <input type="checkbox" />
-        <span></span>
-    </Label>
-    <Label checkbox>Hover
-        <input type="checkbox" checked="checked" />
-        <span></span>
-    </Label>
-    <Label checkbox selected-hover>Selected Hover
-        <input type="checkbox" checked="checked" />
-        <span></span>
-    </Label>
-    <Label checkbox disabled>Disabled
-        <input type="checkbox" />
-        <span></span>
-    </Label>
-      <Label checkbox disabled>Disabled Selected
-        <input type="checkbox" checked="checked" />
-        <span></span>
-    </Label>
+  <Label checkbox>
+    Regular
+    <input type="checkbox" />
+    <span />
+  </Label>
+  <Label checkbox hover>
+    Hover
+    <input type="checkbox" />
+    <span />
+  </Label>
+  <Label checkbox>
+    Hover
+    <input type="checkbox" checked="checked" />
+    <span />
+  </Label>
+  <Label checkbox selected-hover>
+    Selected Hover
+    <input type="checkbox" checked="checked" />
+    <span />
+  </Label>
+  <Label checkbox disabled>
+    Disabled
+    <input type="checkbox" />
+    <span />
+  </Label>
+  <Label checkbox disabled>
+    Disabled Selected
+    <input type="checkbox" checked="checked" />
+    <span />
+  </Label>
 </Checkbox>

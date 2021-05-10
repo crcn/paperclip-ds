@@ -1,0 +1,72 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add prettier-paperclip-plugin --save-dev
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.7/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/crcn/.pyenv/bin:/Users/crcn/.cargo/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/prettier-paperclip-plugin: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "paperclip",
+    "description": "Figma designs in paperclip",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "build": "concurrently \"paperclip build --definition --write\" \"webpack\"",
+      "start": "concurrently \"paperclip build --definition --write --watch\" \"webpack serve --open\"",
+      "build:watch": "concurrently \"paperclip build --definition --write --watch\" \"webpack --watch\"",
+      "build:definitions": "paperclip build --definition --write",
+      "snapshot": "percy exec -- percy-paperclip"
+    },
+    "license": "",
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+      "@types/react": "^17.0.3",
+      "@types/react-dom": "^17.0.3",
+      "concurrently": "^6.0.2",
+      "css-loader": "^5.2.4",
+      "file-loader": "^6.2.0",
+      "html-webpack-plugin": "^5.3.1",
+      "paperclip-cli": "^17.8.9",
+      "paperclip-compiler-react": "^17.8.9",
+      "paperclip-loader": "^17.8.9",
+      "percy": "^0.28.6",
+      "percy-paperclip": "^17.8.9",
+      "style-loader": "^2.0.0",
+      "ts-loader": "^9.0.0",
+      "typescript": "^4.2.4",
+      "webpack": "^5.34.0",
+      "webpack-cli": "^4.6.0",
+      "webpack-dev-server": "^3.11.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

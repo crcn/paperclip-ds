@@ -1,93 +1,81 @@
 <div export component as="Panel">
-    <style>
-        padding: 20px;
-        display: flex;
-        flex-direction: row;
-    </style>
-    {children}
+  <style>
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+  </style>
+  {children}
 </div>
-<div export component as="Label" className:counter="counter" className:small="small" className:fill="fill" className:line="line" className:primary="primary" className:dark="dark" className:negative="negative">
-    <style>
-        vertical-align: middle;
-        text-align: center;
-        background: #0085FF;
-        border: 1px solid #0085FF;
-        color: #fff;
-        margin: 10px;
-        font-size: 14px;
-        line-height: 24px;
-        /* padding: 3px 0 0; */
-        box-sizing: border-box;
-        width: 24px;
-        height: 24px;
-        border-radius: 100%;
-        &.dark{
-            background: #323338;
-            border-color: #323338;
-        }
-        &.negative{
-            background: #E44258;
-            border-color: #E44258;
-        }
-        &.small{
-            width: 18px;
-            height: 18px;
-            font-size: 12px;
-            line-height: 18px;
-        }
-        &.line{
-            background: transparent;
-            &.primary{
-                color: #0085FF;
-            }
-            &.negative{
-                color: #E44258;
-            }
-            &.dark{
-                color: #323338;
-            }
-        }
-    </style>
-    {children}
+<div export
+  component
+  as="Label"
+  className:counter="counter"
+  className:small="small"
+  className:fill="fill"
+  className:line="line"
+  className:primary="primary"
+  className:dark="dark"
+  className:negative="negative">
+  <style>
+    vertical-align: middle;
+    text-align: center;
+    background: #0085FF;
+    border: 1px solid #0085FF;
+    color: #fff;
+    margin: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    &.dark {
+      background: #323338;
+      border-color: #323338;
+    }
+    &.negative {
+      background: #E44258;
+      border-color: #E44258;
+    }
+    &.small {
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &.line {
+      background: transparent;
+      &.primary {
+        color: #0085FF;
+      }
+      &.negative {
+        color: #E44258;
+      }
+      &.dark {
+        color: #323338;
+      }
+    }
+  </style>
+  {children}
 </div>
 
 <Counter>
-    <Panel>
-        <Label fill primary>
-            5
-        </Label>
-        <Label fill dark>
-            5
-        </Label>
-        <Label fill negative>
-            5
-        </Label>
-    </Panel>
-    <Panel>
-        <Label small fill primary>
-            5
-        </Label>
-        <Label small fill dark>
-            5
-        </Label>
-        <Label small fill negative>
-            5
-        </Label>
-    </Panel>
-     <Panel>
-        <Label fill line primary>
-            5
-        </Label>
-        <Label fill line dark>
-            5
-        </Label>
-    </Panel>
-    <Panel>
-        <Label small fill line primary>
-            5
-        </Label>
-        <Label small fill line dark>
-            5
-        </Label>
-    </Panel>
+  <Panel>
+    <Label fill primary>5</Label>
+    <Label fill dark>5</Label>
+    <Label fill negative>5</Label>
+  </Panel>
+  <Panel>
+    <Label small fill primary>5</Label>
+    <Label small fill dark>5</Label>
+    <Label small fill negative>5</Label>
+  </Panel>
+  <Panel>
+    <Label fill line primary>5</Label>
+    <Label fill line dark>5</Label>
+  </Panel>
+  <Panel>
+    <Label small fill line primary>5</Label>
+    <Label small fill line dark>5</Label>
+  </Panel>
 </Counter>
